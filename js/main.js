@@ -74,7 +74,107 @@ function setHeroSlide(index) {
     });
 }
 
-// 3. CRANE CAPACITY & COST ESTIMATOR
+// 3. CRANE CAPACITY & COST ESTIMATOR CONFIGURATIONS
+const equipmentConfigs = {
+    hydraulic: {
+        name: "Hydraulic Mobile Crane (Telescopic)",
+        min: 20,
+        max: 500,
+        default: 120,
+        step: 5,
+        unit: "Tons",
+        metricTitle: "2. Required Lifting Capacity",
+        legend: ["20 Tons", "150 Tons", "350 Tons", "500T Max"],
+        modelName: (v) => `${v}T Hydraulic Telescopic Crane + SLI`,
+        baseDaily: (v) => 11000 + (v * 210)
+    },
+    lattice: {
+        name: "Lattice Boom / Crawler Crane",
+        min: 80,
+        max: 700,
+        default: 250,
+        step: 10,
+        unit: "Tons",
+        metricTitle: "2. Required Lifting Capacity",
+        legend: ["80 Tons", "250 Tons", "500 Tons", "700T Max"],
+        modelName: (v) => `${v}T Lattice Boom / Crawler Crane`,
+        baseDaily: (v) => 28000 + (v * 240)
+    },
+    pickcarry: {
+        name: "Pick and Carry Industrial Crane",
+        min: 2,
+        max: 30,
+        default: 15,
+        step: 1,
+        unit: "Tons",
+        metricTitle: "2. Required Lifting Capacity",
+        legend: ["2 Tons", "10 Tons", "20 Tons", "30T Max"],
+        modelName: (v) => `${v}T Pick & Carry Industrial Crane`,
+        baseDaily: (v) => 5500 + (v * 380)
+    },
+    trailer: {
+        name: "Heavy Duty Low-Bed Trailer",
+        min: 20,
+        max: 250,
+        default: 80,
+        step: 5,
+        unit: "Tons Payload",
+        metricTitle: "2. Required Payload Capacity",
+        legend: ["20 Tons", "80 Tons", "150 Tons", "250T Max"],
+        modelName: (v) => `${v}T Low-Bed / Multi-Axle Trailer`,
+        baseDaily: (v) => 9500 + (v * 180)
+    },
+    forklift: {
+        name: "Industrial Forklift",
+        min: 2,
+        max: 25,
+        default: 5,
+        step: 1,
+        unit: "Tons",
+        metricTitle: "2. Required Lifting Capacity",
+        legend: ["2 Tons", "5 Tons", "15 Tons", "25T Max"],
+        modelName: (v) => `${v}T Heavy Duty Diesel Forklift`,
+        baseDaily: (v) => 4000 + (v * 350)
+    },
+    manlift: {
+        name: "Manlift / Articulated Boom Lift",
+        min: 10,
+        max: 50,
+        default: 25,
+        step: 5,
+        unit: "Meters Reach",
+        metricTitle: "2. Working Platform Height",
+        legend: ["10 Meters", "20 Meters", "35 Meters", "50m Max"],
+        modelName: (v) => `${v}m Articulated Boom Lift / Manlift Platform`,
+        baseDaily: (v) => 6500 + (v * 250)
+    }
+};
+
+function handleEquipmentTypeChange() {
+    const typeSelect = document.getElementById('calcType');
+    const tonnageInput = document.getElementById('calcTonnage');
+    const metricTitle = document.getElementById('calcTonnageMetricLabel');
+    const legend = document.getElementById('calcLegend');
+    if (!typeSelect || !tonnageInput) return;
+
+    const typeKey = typeSelect.value;
+    const cfg = equipmentConfigs[typeKey] || equipmentConfigs.hydraulic;
+
+    tonnageInput.min = cfg.min;
+    tonnageInput.max = cfg.max;
+    tonnageInput.step = cfg.step;
+    tonnageInput.value = cfg.default;
+    tonnageInput.setAttribute('aria-valuemin', cfg.min);
+    tonnageInput.setAttribute('aria-valuemax', cfg.max);
+
+    if (metricTitle) metricTitle.textContent = cfg.metricTitle;
+    if (legend) {
+        legend.innerHTML = cfg.legend.map(l => `<span>${l}</span>`).join('');
+    }
+
+    updateCraneEstimate();
+}
+
 function updateCraneEstimate() {
     const typeSelect = document.getElementById('calcType');
     const tonnageInput = document.getElementById('calcTonnage');
@@ -85,38 +185,16 @@ function updateCraneEstimate() {
 
     if (!typeSelect || !tonnageInput || !durationSelect) return;
 
-    const tonnage = parseInt(tonnageInput.value, 10);
-    const days = parseInt(durationSelect.value, 10);
-    const selectedType = typeSelect.value;
+    const typeKey = typeSelect.value;
+    const cfg = equipmentConfigs[typeKey] || equipmentConfigs.hydraulic;
+    const val = parseInt(tonnageInput.value, 10) || cfg.default;
+    const days = parseInt(durationSelect.value, 10) || 7;
 
-    tonnageInput.setAttribute('aria-valuenow', tonnage);
-    if (tonnageLabel) tonnageLabel.textContent = tonnage + " Tons";
+    tonnageInput.setAttribute('aria-valuenow', val);
+    if (tonnageLabel) tonnageLabel.textContent = `${val} ${cfg.unit}`;
 
-    let modelName = "";
-    let dailyRate = 12000;
-
-    if (selectedType === 'pickcarry') {
-        const cappedTonnage = Math.min(tonnage, 30);
-        modelName = cappedTonnage + "T Pick & Carry Industrial Crane";
-        dailyRate = 5500 + (cappedTonnage * 380);
-    } else if (selectedType === 'lattice') {
-        const minLattice = Math.max(tonnage, 80);
-        modelName = minLattice + "T Lattice Boom / Crawler Crane";
-        dailyRate = 28000 + (minLattice * 240);
-    } else if (selectedType === 'trailer') {
-        modelName = tonnage + "T Capacity Low-Bed / Hydraulic Axle Trailer";
-        dailyRate = 9500 + (tonnage * 180);
-    } else if (selectedType === 'forklift') {
-        const cappedFork = Math.min(tonnage, 25);
-        modelName = cappedFork + "T Heavy Duty Diesel Forklift";
-        dailyRate = 4000 + (cappedFork * 350);
-    } else if (selectedType === 'manlift') {
-        modelName = "Articulated Boom Lift / Manlift Platform";
-        dailyRate = 6500 + (Math.min(tonnage, 20) * 200);
-    } else {
-        modelName = tonnage + "T Hydraulic Telescopic Crane + SLI";
-        dailyRate = 11000 + (tonnage * 210);
-    }
+    const modelName = cfg.modelName(val);
+    const dailyRate = cfg.baseDaily(val);
 
     // Multi-day discount factor
     const discountFactor = days >= 26 ? 0.82 : (days >= 7 ? 0.9 : 1);
@@ -289,12 +367,12 @@ function openLightbox(imageSrc, captionText) {
     if (!lightbox) {
         lightbox = document.createElement('div');
         lightbox.id = 'lightboxModal';
-        lightbox.className = 'fixed inset-0 z-50 bg-black/90 lightbox-backdrop flex items-center justify-center p-4 transition-all duration-300';
+        lightbox.className = 'fixed inset-0 z-50 bg-black/90 lightbox-backdrop flex items-center justify-center p-3 sm:p-6 transition-all duration-300';
         lightbox.innerHTML = `
             <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center">
-                <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-brand-orange text-3xl font-bold p-2 focus:outline-none" aria-label="Close Lightbox">&times;</button>
-                <img id="lightboxImg" src="" alt="Pandit Crane Project" class="max-h-[80vh] w-auto object-contain rounded-xl shadow-2xl border border-white/20">
-                <p id="lightboxCaption" class="mt-4 text-white/90 text-sm font-heading font-medium text-center bg-brand-blueDark/80 px-4 py-2 rounded-lg"></p>
+                <button onclick="closeLightbox()" class="absolute top-2 right-2 sm:-top-12 sm:right-0 w-11 h-11 flex items-center justify-center bg-black/60 sm:bg-white/10 hover:bg-brand-orange text-white rounded-full text-2xl font-bold p-2 focus:outline-none transition z-10" aria-label="Close Lightbox">&times;</button>
+                <img id="lightboxImg" src="" alt="Pandit Crane Project" class="max-h-[75vh] sm:max-h-[80vh] w-auto max-w-full object-contain rounded-xl shadow-2xl border border-white/20">
+                <p id="lightboxCaption" class="mt-3 sm:mt-4 text-white/90 text-xs sm:text-sm font-heading font-medium text-center bg-brand-blueDark/90 border border-white/10 px-4 py-2 rounded-xl max-w-xl"></p>
             </div>
         `;
         document.body.appendChild(lightbox);
@@ -445,4 +523,17 @@ window.addEventListener('DOMContentLoaded', () => {
     if (hubJaipur) {
         selectHub('Jaipur, Rajasthan');
     }
+
+    // Global ESC key to dismiss open modals & mobile menu
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeBrochureModal();
+            closeBrandKitModal();
+            closeLightbox();
+            const mobMenu = document.getElementById('mobileMenu');
+            if (mobMenu && !mobMenu.classList.contains('hidden')) {
+                toggleMobileMenu();
+            }
+        }
+    });
 });
