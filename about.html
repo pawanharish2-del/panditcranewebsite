@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Pandit Crane Service - 20+ Years Heavy Lifting Excellence</title>
+    <meta name="description" content="Learn about Pandit Crane Service, Rajasthan's leading heavy crane rental service. 200+ cranes from 2T to 700T with 20+ years of zero-accident track record.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#204E9A',
+                            blueDark: '#122B59',
+                            blueLight: '#EBF2FC',
+                            orange: '#F59121',
+                            orangeLight: '#FC993D',
+                            grey: '#C6C6C6',
+                            surface: '#F4F7FA',
+                            dark: '#0E1E38'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- TOP UTILITY BAR -->
+    <div class="bg-[#060E1C] text-gray-300 text-xs border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+                <div class="flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-brand-orange shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    <div class="flex flex-wrap items-center gap-1.5">
+                        <a href="tel:+917822022220" class="hover:text-brand-orange transition font-semibold text-white">+91 7822022220</a>
+                        <span class="text-white/30 hidden sm:inline">|</span>
+                        <a href="tel:+919923288888" class="hover:text-brand-orange transition font-semibold text-white hidden sm:inline">+91 9923288888</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-1.5 hidden md:flex">
+                    <svg class="w-4 h-4 text-brand-orange shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <a href="mailto:info@panditcrane.com" class="hover:text-brand-orange transition">info@panditcrane.com</a>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 ml-auto">
+                <button onclick="openBrochureModal()" class="inline-flex items-center gap-1.5 bg-brand-orange hover:bg-brand-orangeLight text-white px-3 py-1 rounded text-[11px] font-heading font-bold tracking-wider uppercase transition shadow-sm">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Brochure
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER NAVIGATION (DARK BLUEPRINT THEME) -->
+    <header id="navbar" class="sticky top-0 z-40 site-header transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 sm:h-24">
+                <a href="index.html" class="flex items-center gap-3 group focus:outline-none" aria-label="Pandit Crane Service Home">
+                    <img src="images/logo.png" alt="Pandit Crane Service Logo" class="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-md">
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden xl:flex items-center space-x-6 text-sm font-heading">
+                    <a href="index.html" class="nav-link py-2">Home</a>
+                    <a href="about.html" class="nav-link active py-2">About</a>
+                    <a href="services.html" class="nav-link py-2">Our Equipment</a>
+                    <a href="our-services.html" class="nav-link py-2">Our Services</a>
+                    <a href="our-clients.html" class="nav-link py-2">Our Clients</a>
+                    <a href="gallery.html" class="nav-link py-2">Gallery</a>
+                    <a href="blog.html" class="nav-link py-2">Blog</a>
+                    <a href="contact.html" class="nav-link py-2">Contact Us</a>
+                </nav>
+
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="contact.html" class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeLight text-white font-heading font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-lg shadow-orange-glow transition transform hover:-translate-y-0.5">
+                        <span>Get Quote</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="xl:hidden p-2.5 rounded-lg text-white hover:bg-white/10 focus:outline-none" aria-label="Toggle Menu">
+                    <svg id="menuIconOpen" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg id="menuIconClose" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden xl:hidden bg-[#091528] border-t border-white/10 px-4 pt-3 pb-6 space-y-3 shadow-2xl">
+            <div class="grid grid-cols-2 gap-2 font-heading font-semibold text-sm text-gray-200">
+                <a href="index.html" class="p-2.5 rounded-lg hover:bg-white/10">Home</a>
+                <a href="about.html" class="p-2.5 rounded-lg bg-brand-orange/20 text-brand-orange font-bold">About</a>
+                <a href="services.html" class="p-2.5 rounded-lg hover:bg-white/10">Our Equipment</a>
+                <a href="our-services.html" class="p-2.5 rounded-lg hover:bg-white/10">Our Services</a>
+                <a href="our-clients.html" class="p-2.5 rounded-lg hover:bg-white/10">Our Clients</a>
+                <a href="gallery.html" class="p-2.5 rounded-lg hover:bg-white/10">Gallery</a>
+                <a href="blog.html" class="p-2.5 rounded-lg hover:bg-white/10">Blog</a>
+            </div>
+            <div class="pt-3 border-t border-white/10 flex flex-col sm:flex-row gap-2.5">
+                <button onclick="openBrochureModal(); toggleMobileMenu();" class="w-full py-2.5 border border-white/30 text-white font-heading font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-white/10">
+                    Download Brochure
+                </button>
+                <a href="contact.html" class="w-full py-3 bg-brand-orange text-white text-center font-heading font-bold text-xs uppercase tracking-wider rounded-lg shadow-orange-glow">
+                    Request Fast Quote
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HERO BANNER -->
+    <section class="relative bg-blueprint text-white py-16 sm:py-24 overflow-hidden">
+        <div class="h-1.5 w-full hazard-stripe absolute top-0 left-0"></div>
+        <div class="absolute inset-0 pointer-events-none opacity-20 overflow-hidden mix-blend-luminosity">
+            <img src="images/IMG_2140.jpg" alt="Pandit Crane Engineering" class="w-full h-full object-cover">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="flex items-center gap-2 text-xs font-heading font-bold uppercase tracking-widest text-brand-orangeLight mb-3">
+                    <a href="index.html" class="hover:underline">Home</a>
+                    <span>/</span>
+                    <span>About Us</span>
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-heading font-extrabold text-white leading-tight">
+                    20+ Years of Heavy Rigging &amp; <span class="text-brand-orange">Engineering Mastery</span>
+                </h1>
+                <p class="text-gray-300 text-base sm:text-lg font-light mt-4 leading-relaxed">
+                    Based in Jaipur, Rajasthan, Pandit Crane Service is India's dependable crane rental partner with a 200+ fleet capable of lifts up to 700 tons.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE COMPANY STORY (WHO WE ARE) -->
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-brand-orange font-heading font-bold text-xs uppercase tracking-widest">
+                        <span class="w-8 h-0.5 bg-brand-orange"></span>
+                        WHO WE ARE
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-blueDark leading-tight">
+                        Leaders in Crane &amp; AWP Services Across India
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        Based in <strong class="text-brand-blueDark font-semibold">Jaipur, Rajasthan</strong>, Pandit Crane Service has steadily grown over the past <strong class="text-brand-orange font-semibold">20 years</strong> to become a leader in the crane &amp; AWP service industry. Our fleet of over <strong class="text-brand-blueDark font-semibold">200 modern, technologically advanced machines</strong> includes Truck Mounted and All-Terrain Hydraulic Cranes (up to 700 Tonnes), Crawler Cranes (up to 400 Tonnes), Aerial Work Platforms (AWPs), and trailers for project logistics and movements.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        We take pride in delivering top-quality services, adhering to strict safety standards, and employing highly skilled and certified crane operators. With the support of our dedicated team, we offer reliable services at competitive prices. Renowned for our expertise in crane operations across India, we are trusted for our knowledge of local conditions and our ability to handle complex projects.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed font-medium">
+                        At Pandit Crane Service, we provide personalized, professional service, ensuring the highest level of satisfaction for every client.
+                    </p>
+
+                    <!-- 4 Core Pillars Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3">
+                        <div class="bg-brand-surface p-3.5 rounded-xl border border-gray-200 text-center">
+                            <div class="w-8 h-8 rounded-lg bg-brand-blue text-white flex items-center justify-center mx-auto mb-2 text-xs font-bold">01</div>
+                            <div class="text-xs font-heading font-extrabold text-brand-blueDark uppercase">Quality Services</div>
+                        </div>
+                        <div class="bg-brand-surface p-3.5 rounded-xl border border-gray-200 text-center">
+                            <div class="w-8 h-8 rounded-lg bg-brand-orange text-white flex items-center justify-center mx-auto mb-2 text-xs font-bold">02</div>
+                            <div class="text-xs font-heading font-extrabold text-brand-blueDark uppercase">Innovative Tech</div>
+                        </div>
+                        <div class="bg-brand-surface p-3.5 rounded-xl border border-gray-200 text-center">
+                            <div class="w-8 h-8 rounded-lg bg-brand-blue text-white flex items-center justify-center mx-auto mb-2 text-xs font-bold">03</div>
+                            <div class="text-xs font-heading font-extrabold text-brand-blueDark uppercase">Trustworthy</div>
+                        </div>
+                        <div class="bg-brand-surface p-3.5 rounded-xl border border-gray-200 text-center">
+                            <div class="w-8 h-8 rounded-lg bg-brand-orange text-white flex items-center justify-center mx-auto mb-2 text-xs font-bold">04</div>
+                            <div class="text-xs font-heading font-extrabold text-brand-blueDark uppercase">Expert Team</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photos Column -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div class="img-zoom-container rounded-2xl overflow-hidden shadow-industrial border border-gray-200 cursor-pointer" onclick="openLightbox('images/IMG_0540.jpg', 'Pandit Heavy Crane Fleet')">
+                        <img src="images/IMG_0540.jpg" alt="Pandit Heavy Fleet" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="img-zoom-container rounded-2xl overflow-hidden shadow-industrial border border-gray-200 cursor-pointer pt-6" onclick="openLightbox('images/IMG_4523.jpg', 'Rigging Engineering Team')">
+                        <img src="images/IMG_4523.jpg" alt="Heavy Crane Operations" class="w-full h-64 object-cover">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS & OPERATIONAL EXCELLENCE METRICS -->
+    <section class="py-14 bg-brand-surface border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-brand-orange font-heading font-bold text-xs uppercase tracking-widest">
+                    BENCHMARK PERFORMANCE
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-brand-blueDark mt-1">
+                    Industry Proven Skills &amp; Operational Standards
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Skill 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-heading font-bold text-sm text-brand-blueDark">Experienced Workforce</span>
+                        <span class="font-heading font-extrabold text-lg text-brand-orange">100%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-brand-orange h-2.5 rounded-full" style="width: 100%"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">Certified operators, riggers, and seasoned heavy lift engineers.</p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-heading font-bold text-sm text-brand-blueDark">Min. Breakdown at Site</span>
+                        <span class="font-heading font-extrabold text-lg text-brand-blue">98%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-brand-blue h-2.5 rounded-full" style="width: 98%"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">Rigorous pre-dispatch servicing and dynamic SLI telemetry.</p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-heading font-bold text-sm text-brand-blueDark">Timely Services</span>
+                        <span class="font-heading font-extrabold text-lg text-brand-orange">100%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-brand-orange h-2.5 rounded-full" style="width: 100%"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">Punctual site mobilization and on-schedule project completion.</p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="font-heading font-bold text-sm text-brand-blueDark">Safety &amp; Compliance</span>
+                        <span class="font-heading font-extrabold text-lg text-brand-blue">98%</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-brand-blue h-2.5 rounded-full" style="width: 98%"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-2">Zero-accident safety protocols and tested rigging hardware.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR LEADERSHIP & TEAM -->
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-orange font-heading font-bold text-xs uppercase tracking-widest">
+                    EXPERT LEADERSHIP
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-blueDark mt-1">
+                    Meet Our Experienced Team
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm">
+                    Decades of collective experience driving heavy lift engineering, crane fleet logistics, and industrial project execution across India.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Member 1 -->
+                <div class="bg-brand-surface rounded-2xl p-6 border border-gray-200 text-center hover:shadow-industrial transition flex flex-col items-center">
+                    <div class="w-20 h-20 rounded-full bg-brand-blue text-white font-heading font-extrabold text-2xl flex items-center justify-center mb-4 shadow-md">
+                        AS
+                    </div>
+                    <h3 class="font-heading font-extrabold text-base text-brand-blueDark">Avadhesh Sharma</h3>
+                    <div class="text-xs font-heading font-bold text-brand-orange uppercase mt-1">CEO</div>
+                    <p class="text-xs text-slate-500 mt-2">Guiding company vision, heavy fleet acquisitions, and strategic partnerships.</p>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="bg-brand-surface rounded-2xl p-6 border border-gray-200 text-center hover:shadow-industrial transition flex flex-col items-center">
+                    <div class="w-20 h-20 rounded-full bg-brand-orange text-white font-heading font-extrabold text-2xl flex items-center justify-center mb-4 shadow-md">
+                        AS
+                    </div>
+                    <h3 class="font-heading font-extrabold text-base text-brand-blueDark">Anant Sharma</h3>
+                    <div class="text-xs font-heading font-bold text-brand-orange uppercase mt-1">Managing Director</div>
+                    <p class="text-xs text-slate-500 mt-2">Managing nationwide operations, high-tonnage crane dispatch, and client relations.</p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="bg-brand-surface rounded-2xl p-6 border border-gray-200 text-center hover:shadow-industrial transition flex flex-col items-center">
+                    <div class="w-20 h-20 rounded-full bg-brand-blueDark text-white font-heading font-extrabold text-2xl flex items-center justify-center mb-4 shadow-md">
+                        YS
+                    </div>
+                    <h3 class="font-heading font-extrabold text-base text-brand-blueDark">Yagya Sharma</h3>
+                    <div class="text-xs font-heading font-bold text-brand-orange uppercase mt-1">Executive Director</div>
+                    <p class="text-xs text-slate-500 mt-2">Leading operational efficiency, safety protocols, and technical governance.</p>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="bg-brand-surface rounded-2xl p-6 border border-gray-200 text-center hover:shadow-industrial transition flex flex-col items-center">
+                    <div class="w-20 h-20 rounded-full bg-slate-700 text-white font-heading font-extrabold text-2xl flex items-center justify-center mb-4 shadow-md">
+                        KS
+                    </div>
+                    <h3 class="font-heading font-extrabold text-base text-brand-blueDark">Kamlesh Sharma</h3>
+                    <div class="text-xs font-heading font-bold text-brand-blue uppercase mt-1">Project Manager</div>
+                    <p class="text-xs text-slate-500 mt-2">Directing refinery maintenance, tandem lifts, and industrial shutdown sites.</p>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="bg-brand-surface rounded-2xl p-6 border border-gray-200 text-center hover:shadow-industrial transition flex flex-col items-center">
+                    <div class="w-20 h-20 rounded-full bg-slate-700 text-white font-heading font-extrabold text-2xl flex items-center justify-center mb-4 shadow-md">
+                        VP
+                    </div>
+                    <h3 class="font-heading font-extrabold text-base text-brand-blueDark">Vijay Pal</h3>
+                    <div class="text-xs font-heading font-bold text-brand-blue uppercase mt-1">Project Manager</div>
+                    <p class="text-xs text-slate-500 mt-2">Supervising windmill erection, expressway bridges, and mega rigging sites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR POLICIES SECTION (INTERACTIVE TABS & VERIFIED TEXT) -->
+    <section id="policies" class="py-16 sm:py-24 bg-brand-surface border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-orange font-heading font-bold text-xs uppercase tracking-widest">
+                    OUR POLICIES
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-heading font-extrabold text-brand-blueDark mt-1">
+                    Trustworthy In Our Actions
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm">
+                    By always acting and communicating with trust, we ensure uncompromised safety, environmental sustainability, and quality assurance.
+                </p>
+            </div>
+
+            <!-- Policy Navigation Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <button onclick="switchPolicyTab('safety')" id="policyTab-safety" class="policy-tab-btn active bg-brand-blue text-white px-6 py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-wider shadow transition">
+                    Health and Safety Policy
+                </button>
+                <button onclick="switchPolicyTab('environment')" id="policyTab-environment" class="policy-tab-btn bg-white text-slate-700 hover:bg-brand-blueLight px-6 py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-wider border border-gray-200 transition">
+                    Environmental Policy
+                </button>
+                <button onclick="switchPolicyTab('quality')" id="policyTab-quality" class="policy-tab-btn bg-white text-slate-700 hover:bg-brand-blueLight px-6 py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-wider border border-gray-200 transition">
+                    Quality Assurance Policy
+                </button>
+            </div>
+
+            <!-- Policy Content Container -->
+            <div class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm max-w-4xl mx-auto">
+                
+                <!-- Tab 1: Health & Safety -->
+                <div id="policyContent-safety" class="policy-pane space-y-5">
+                    <div class="flex items-center gap-3 pb-4 border-b border-gray-100">
+                        <div class="w-10 h-10 rounded-xl bg-brand-orange/15 text-brand-orange flex items-center justify-center font-bold">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-extrabold text-2xl text-brand-blueDark">Health and Safety Policy</h3>
+                            <p class="text-xs text-brand-orange font-semibold">Zero-Accident Rigging &amp; Workforce Protection</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed font-medium">
+                        People are our most valuable asset and their safety takes precedence over everything. Every effort is made to ensure the safety of our staff and clients. At Pandit Crane Service, we place health and safety of every stakeholder at first place and nothing is more important than that. We take pride in our quality of work and in our services. Our policy strictly follows:
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0"></span>
+                            <span><strong>Pre-Planned Operations:</strong> Operations for site are well planned in advance and are executed keeping in mind safety of each individual at worksite.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0"></span>
+                            <span><strong>Safe Load Indicator (SLI) Calibrated:</strong> The execution of work in hydraulic crane is done by Safe Load Indicator device which is installed in mobile cranes to alert the operators if the lift is exceeding the safe operating range of machinery.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0"></span>
+                            <span><strong>Trained Crew &amp; Driver Support:</strong> Helpers and drivers are well aware of Safety measures and the management is always committed to provide the support and resources required for successful completion of work at site.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0"></span>
+                            <span><strong>Pre-Checked Lifting Gear:</strong> Lifting tools like D-Shackles, hook, ceiling, belts etc. used at site are checked prior to work so that there is ZERO chance of accidents.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0"></span>
+                            <span><strong>Constant Client Touch:</strong> Our supervisor are very experienced and they are in constant touch with clients. They plan the whole operations and execute the work at the most professional way.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-orange mt-2 shrink-0"></span>
+                            <span><strong>Skilled Operator Culture:</strong> We are committed to build a culture where we employ high skilled operators and provide them with modern technology devices and young fleet of cranes. Safety of every individual during operations is our number one core value and by working together, we have been able to achieve this goal.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tab 2: Environment -->
+                <div id="policyContent-environment" class="policy-pane hidden space-y-5">
+                    <div class="flex items-center gap-3 pb-4 border-b border-gray-100">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-extrabold text-2xl text-brand-blueDark">Environmental Policy</h3>
+                            <p class="text-xs text-emerald-700 font-semibold">Sustainable Development &amp; Clean Energy Projects</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed font-medium">
+                        We at Pandit Crane Service believe in sustainable development and conserving resources for future generation. We take care to protect and preserve the environment and recognizes environmental protection as a key part of our business performance. We follow these principles to assure best of quality to our clients:
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-emerald-600 mt-2 shrink-0"></span>
+                            <span>We train and educate our workforce about the environmental issues so that our business operations are not affected.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-emerald-600 mt-2 shrink-0"></span>
+                            <span>We place emphasis on environment and consider it as an integral part of our planning process.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-emerald-600 mt-2 shrink-0"></span>
+                            <span>We purchase and avail the resources which are best fit for the environment.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-emerald-600 mt-2 shrink-0"></span>
+                            <span>We are involved in many projects including solar plantation, windmill etc. of government and private entities.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-emerald-600 mt-2 shrink-0"></span>
+                            <span>We place focus on spill and leakage of hydraulic oil so that fertility and quality of land and soil is unaffected.</span>
+                        </li>
+                    </ul>
+                    <p class="text-xs text-slate-500 pt-2 italic">
+                        We adhere to environmental laws when working at site. We continuously strive to improve our environmental performance, meet environmental goals and maintain a healthy workplace.
+                    </p>
+                </div>
+
+                <!-- Tab 3: Quality Assurance -->
+                <div id="policyContent-quality" class="policy-pane hidden space-y-5">
+                    <div class="flex items-center gap-3 pb-4 border-b border-gray-100">
+                        <div class="w-10 h-10 rounded-xl bg-brand-blue/15 text-brand-blue flex items-center justify-center font-bold">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="font-heading font-extrabold text-2xl text-brand-blueDark">Quality Assurance Policy</h3>
+                            <p class="text-xs text-brand-blue font-semibold">Reliable, Efficient &amp; Timely Service Standard</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed font-medium">
+                        We assure the best of our service to our clients and meet their needs at the best possible way. Quality of services provided by us from our big young fleet of cranes is also the reason our consumers trust us. Safe, reliable, and efficient services are provided to them. To provide full satisfaction to our client, we work by following below points so that standard of quality is maintained every time:
+                    </p>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-blue mt-2 shrink-0"></span>
+                            <span><strong>Proper Training:</strong> Proper training to helpers at joining the firm.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-blue mt-2 shrink-0"></span>
+                            <span><strong>Stage-by-Stage Planning:</strong> Proper planning of work at every stage by our team.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-blue mt-2 shrink-0"></span>
+                            <span><strong>Punctual Execution:</strong> Timely completion of all projects.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-blue mt-2 shrink-0"></span>
+                            <span><strong>Effective Methodologies:</strong> Effective approach towards work completion.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 rounded-full bg-brand-blue mt-2 shrink-0"></span>
+                            <span><strong>Resource Conservation:</strong> Conserving resources and protecting environment at every project.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="contact.html" class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeLight text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-xl shadow-orange-glow transition">
+                    <span>Contact Our Engineering Team</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#091528] text-gray-400 pt-14 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                <div class="space-y-4">
+                    <img src="images/logo.png" alt="Pandit Crane Service" class="h-14 w-auto brightness-110">
+                    <p class="text-xs leading-relaxed text-gray-400">
+                        Based in Jaipur, Rajasthan, Pandit Crane Service has grown steadily over the past 20 years. 200+ modern cranes (2T to 700T).
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-white text-xs uppercase tracking-wider mb-4">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="index.html" class="hover:text-brand-orange transition">Home</a></li>
+                        <li><a href="about.html" class="text-brand-orange">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-brand-orange transition">Our Equipment</a></li>
+                        <li><a href="our-services.html" class="hover:text-brand-orange transition">Our Services</a></li>
+                        <li><a href="our-clients.html" class="hover:text-brand-orange transition">Our Clients</a></li>
+                        <li><a href="gallery.html" class="hover:text-brand-orange transition">Photo Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-brand-orange transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-orange transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-white text-xs uppercase tracking-wider mb-4">Our Equipments</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="services.html" class="hover:text-brand-orange transition">Hydraulic Crane (20T-500T)</a></li>
+                        <li><a href="services.html" class="hover:text-brand-orange transition">Pick and Carry Crane (2T-30T)</a></li>
+                        <li><a href="services.html" class="hover:text-brand-orange transition">Lattice Boom Cranes (80T-700T)</a></li>
+                        <li><a href="services.html" class="hover:text-brand-orange transition">Trailers &amp; Low-Beds</a></li>
+                        <li><a href="services.html" class="hover:text-brand-orange transition">Forklifts (2T-25T)</a></li>
+                        <li><a href="services.html" class="hover:text-brand-orange transition">Manlifts &amp; Boom Lifts</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-white text-xs uppercase tracking-wider mb-4">Contact Info</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li class="text-gray-300">291-292, Narayan Vihar, D Block, Asarpura Mod, Jaipur, Rajasthan 302021</li>
+                        <li><a href="tel:+917822022220" class="text-brand-orangeLight font-semibold">+91-7822022220</a></li>
+                        <li><a href="mailto:info@panditcrane.com" class="hover:text-white">info@panditcrane.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <p>Copyright © 2019–2026 Pandit Crane Service. All Rights Reserved.</p>
+                <div class="flex items-center gap-4">
+                    <button onclick="openBrochureModal()" class="text-brand-orange hover:underline">Download Brochure</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BROCHURE MODAL -->
+    <div id="brochureModal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border-t-4 border-brand-orange">
+            <div class="flex items-center justify-between pb-3 border-b border-gray-100">
+                <h3 class="text-lg font-heading font-extrabold text-brand-blueDark">Official Fleet Brochure</h3>
+                <button onclick="closeBrochureModal()" class="text-gray-400 hover:text-gray-700 font-bold text-lg">&times;</button>
+            </div>
+            <p class="text-xs text-slate-600 mt-3 leading-relaxed">
+                Download the official Pandit Crane Service Technical Load Charts &amp; Fleet Profile covering 200+ Cranes (2T to 700T).
+            </p>
+            <div class="mt-4 p-3.5 rounded-xl bg-brand-surface border border-gray-200 text-xs space-y-2">
+                <a href="images/Hydraulic-crane.pdf" target="_blank" class="flex items-center justify-between p-2 rounded-lg bg-white border border-gray-100 hover:border-brand-orange text-brand-blueDark font-bold">
+                    <span>Hydraulic Crane Brochure (PDF)</span>
+                    <span class="text-brand-orange text-xs">Download &rarr;</span>
+                </a>
+                <a href="images/Lattice-boom.pdf" target="_blank" class="flex items-center justify-between p-2 rounded-lg bg-white border border-gray-100 hover:border-brand-orange text-brand-blueDark font-bold">
+                    <span>Lattice Boom Heavy Lift (PDF)</span>
+                    <span class="text-brand-orange text-xs">Download &rarr;</span>
+                </a>
+                <a href="images/Forlift.pdf" target="_blank" class="flex items-center justify-between p-2 rounded-lg bg-white border border-gray-100 hover:border-brand-orange text-brand-blueDark font-bold">
+                    <span>Industrial Forklifts Spec (PDF)</span>
+                    <span class="text-brand-orange text-xs">Download &rarr;</span>
+                </a>
+            </div>
+            <div class="mt-5 flex gap-3">
+                <button onclick="triggerBrochureDownload()" class="flex-1 bg-brand-orange hover:bg-brand-orangeLight text-white font-heading font-bold text-xs uppercase tracking-wider py-3 rounded-xl shadow">
+                    Download Fleet PDF
+                </button>
+                <button onclick="closeBrochureModal()" class="px-4 py-3 border border-gray-200 rounded-xl text-xs font-heading font-bold text-slate-600">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

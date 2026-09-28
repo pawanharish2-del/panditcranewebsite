@@ -1,0 +1,230 @@
+/* ==========================================================================
+   PANDIT CRANE SERVICE - GLOBAL STYLESHEET
+   Brand: Pandit Crane Service | "We Lift Heavy, We Lift High"
+   Colors:
+     - Deep Industrial Blue: #204E9A
+     - Navy Accent / Dark:   #122B59 / #0E1E38 / #0B172E
+     - Soft Blue Tint:       #EBF2FC
+     - Safety Orange:        #F59121 / #FC993D
+     - Subtle Grey:          #C6C6C6
+     - Surface Light:        #F4F7FA
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* --- Reset & Base Typography --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1e293b;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+/* --- Brand Custom Color Variables --- */
+:root {
+    --brand-blue: #204E9A;
+    --brand-blue-dark: #122B59;
+    --brand-blue-deep: #0B172E;
+    --brand-blue-light: #EBF2FC;
+    --brand-orange: #F59121;
+    --brand-orange-light: #FC993D;
+    --brand-grey: #C6C6C6;
+    --brand-surface: #F4F7FA;
+}
+
+/* --- Selection Color --- */
+::selection {
+    background-color: #F59121;
+    color: #FFFFFF;
+}
+
+/* --- Dark Navigation Bar Styling --- */
+.site-header {
+    background-color: rgba(11, 23, 46, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.site-header .nav-link {
+    color: #E2E8F0;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.site-header .nav-link:hover {
+    color: #FC993D;
+}
+
+.site-header .nav-link.active {
+    color: #F59121 !important;
+    position: relative;
+}
+
+.site-header .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #F59121;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(245, 145, 33, 0.6);
+}
+
+/* --- Industrial Blueprint Grid Pattern --- */
+.bg-blueprint {
+    background-color: #0E1E38;
+    background-image: 
+        linear-gradient(rgba(32, 78, 154, 0.22) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(32, 78, 154, 0.22) 1px, transparent 1px),
+        linear-gradient(rgba(252, 153, 61, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(252, 153, 61, 0.07) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+}
+
+.bg-blueprint-subtle {
+    background-color: #122B59;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* --- Safety Hazard Stripe Accent --- */
+.hazard-stripe {
+    background: repeating-linear-gradient(
+        -45deg,
+        #F59121,
+        #F59121 12px,
+        #122B59 12px,
+        #122B59 24px
+    );
+}
+
+.hazard-stripe-sm {
+    background: repeating-linear-gradient(
+        -45deg,
+        #F59121,
+        #F59121 8px,
+        #122B59 8px,
+        #122B59 16px
+    );
+}
+
+/* --- Custom Range Slider --- */
+input[type=range].crane-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+input[type=range].crane-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #204E9A;
+    border-radius: 999px;
+}
+
+input[type=range].crane-slider::-webkit-slider-thumb {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: #F59121;
+    border: 3px solid #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type=range].crane-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.18);
+    background: #FC993D;
+}
+
+/* --- Smooth Crane Hook Float Animation --- */
+@keyframes hookFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(8px); }
+}
+
+.animate-hook {
+    animation: hookFloat 3.6s ease-in-out infinite;
+}
+
+/* --- Industrial Shadows --- */
+.shadow-industrial {
+    box-shadow: 0 10px 30px -5px rgba(18, 43, 89, 0.12), 0 4px 12px -2px rgba(18, 43, 89, 0.06);
+}
+
+.shadow-industrial-lg {
+    box-shadow: 0 20px 40px -10px rgba(18, 43, 89, 0.2), 0 8px 16px -4px rgba(18, 43, 89, 0.1);
+}
+
+.shadow-orange-glow {
+    box-shadow: 0 8px 25px -4px rgba(245, 145, 33, 0.45);
+}
+
+/* --- Image Card Hover Effects & Zoom --- */
+.img-zoom-container {
+    overflow: hidden;
+}
+
+.img-zoom-container img {
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.img-zoom-container:hover img {
+    transform: scale(1.06);
+}
+
+/* --- Lightbox Modal Styles --- */
+.lightbox-backdrop {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* --- Badge & Tag Styles --- */
+.badge-industrial {
+    background-color: rgba(32, 78, 154, 0.1);
+    color: #204E9A;
+    border: 1px solid rgba(32, 78, 154, 0.2);
+}
+
+.badge-orange {
+    background-color: rgba(245, 145, 33, 0.12);
+    color: #F59121;
+    border: 1px solid rgba(245, 145, 33, 0.3);
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F4F7FA;
+}
+::-webkit-scrollbar-thumb {
+    background: #C6C6C6;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #204E9A;
+}
