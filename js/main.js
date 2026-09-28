@@ -18,17 +18,17 @@ function toggleMobileMenu() {
 // 2. HERO SLIDER DATA & LOGIC (If on Homepage)
 const heroSlides = [
     {
-        sub: "WE LIFT HEAVY, WE LIFT HIGH",
+        sub: "We Lift Heavy, We Lift High",
         title: 'Modern Crane Fleet & <span class="text-brand-orange">Professional Rigging</span>',
         desc: "Operating a young, technologically advanced fleet of around 200 cranes across Rajasthan and Haryana. Equipped with Safe Load Indicators (SLI) and certified operators for zero-accident heavy lifting."
     },
     {
-        sub: "CLASS SERVICE & COMPETENT ADVICE",
+        sub: "Class Service & Competent Advice",
         title: 'Heavy Lifting Capacity From <span class="text-brand-orange">2 Tons to 700 Tons</span>',
         desc: "From agile Pick & Carry yard cranes to 700-Ton Lattice Boom & Hydraulic Crawler rigs for refinery, windmill, solar, and bridge infrastructure projects."
     },
     {
-        sub: "20+ YEARS OF TRUSTWORTHY PARTNERSHIP",
+        sub: "20+ Years of Trustworthy Partnership",
         title: 'Zero-Accident Safety & <span class="text-brand-orange">24/7 Rapid Dispatch</span>',
         desc: "Serving Jaipur, Panipat, Pachpadra, Barmer, and Chittorgarh with pre-inspected D-shackles, slings, and experienced site supervisors."
     }
@@ -52,12 +52,23 @@ function setHeroSlide(index) {
     }, 200);
 
     [0, 1, 2].forEach(i => {
-        const dot = document.getElementById('slideDot' + i);
-        if (dot) {
-            if (i === index) {
-                dot.className = "w-8 h-2.5 rounded-full bg-brand-orange transition-all";
+        const btn = document.getElementById('slideDot' + i);
+        if (btn) {
+            const isSelected = (i === index);
+            btn.setAttribute('aria-selected', isSelected ? 'true' : 'false');
+            const indicator = btn.querySelector('.dot-indicator');
+            if (indicator) {
+                if (isSelected) {
+                    indicator.className = "dot-indicator w-8 h-2.5 rounded-full bg-brand-orange transition-all";
+                } else {
+                    indicator.className = "dot-indicator w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition-all";
+                }
             } else {
-                dot.className = "w-2.5 h-2.5 rounded-full bg-white/30 hover:bg-white/60 transition-all";
+                if (isSelected) {
+                    btn.className = "w-8 h-2.5 rounded-full bg-brand-orange transition-all";
+                } else {
+                    btn.className = "w-2.5 h-2.5 rounded-full bg-white/30 hover:bg-white/60 transition-all";
+                }
             }
         }
     });
@@ -78,6 +89,7 @@ function updateCraneEstimate() {
     const days = parseInt(durationSelect.value, 10);
     const selectedType = typeSelect.value;
 
+    tonnageInput.setAttribute('aria-valuenow', tonnage);
     if (tonnageLabel) tonnageLabel.textContent = tonnage + " Tons";
 
     let modelName = "";
@@ -146,9 +158,9 @@ function filterEquipment(category) {
 
     buttons.forEach(btn => {
         if (btn.getAttribute('data-filter') === category) {
-            btn.className = "equip-filter-btn active bg-brand-blue text-white font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg transition";
+            btn.className = "equip-filter-btn active bg-brand-blue text-white font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg shrink-0 transition";
         } else {
-            btn.className = "equip-filter-btn bg-white text-slate-700 hover:bg-brand-blueLight font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg border border-gray-200 transition";
+            btn.className = "equip-filter-btn bg-white text-slate-700 hover:bg-brand-blueLight font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg border border-gray-200 shrink-0 transition";
         }
     });
 
@@ -193,12 +205,16 @@ function switchPolicyTab(tabKey) {
     });
 }
 
-// 6. REGIONAL SERVICE HUBS & KEYWORDS
-const hubKeywords = [
-    "Crane Services", "Crane Rental", "Hydraulic Crane Service",
-    "Pick and Carry Crane Service", "Lattice Boom Crane Rental",
-    "Telescopic Boom Crane Rental", "Crawler Crane Rental",
-    "Forklift Rental", "Boom Lift Rental", "Manlift Rental", "Heavy Trailer Rental"
+// 6. REGIONAL SERVICE HUBS & CATEGORIZED KEYWORDS
+const hubCategories = [
+    {
+        title: "Heavy & Mobile Cranes",
+        keywords: ["Crane Services", "Crane Rental", "Hydraulic Crane Service", "Pick and Carry Crane Service", "Lattice Boom Crane Rental", "Crawler Crane Rental", "Telescopic Boom Crane Rental"]
+    },
+    {
+        title: "Transport & Plant Access",
+        keywords: ["Forklift Rental", "Boom Lift Rental", "Manlift Rental", "Heavy Trailer Rental"]
+    }
 ];
 
 function selectHub(cityFull) {
@@ -225,25 +241,45 @@ function selectHub(cityFull) {
     if (!container) return;
 
     container.innerHTML = "";
-    hubKeywords.forEach(kw => {
-        const fullTag = kw + " " + shortName;
-        const btn = document.createElement('button');
-        btn.type = "button";
-        btn.className = "text-xs bg-white hover:bg-brand-orange hover:text-white text-slate-700 font-medium px-3 py-1.5 rounded-lg border border-gray-200 transition shadow-sm";
-        btn.textContent = fullTag;
-        btn.onclick = () => {
-            const inqLoc = document.getElementById('inqLocation');
-            const inqEquip = document.getElementById('inqEquipment');
-            if (inqLoc && inqEquip) {
-                inqLoc.value = cityFull;
-                inqEquip.value = fullTag;
-                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                showToast("Pre-filled inquiry for " + fullTag);
-            } else {
-                window.location.href = 'contact.html?equipment=' + encodeURIComponent(fullTag) + '&location=' + encodeURIComponent(cityFull);
-            }
-        };
-        container.appendChild(btn);
+    
+    hubCategories.forEach(cat => {
+        const groupWrapper = document.createElement('div');
+        groupWrapper.className = "space-y-2";
+        
+        const catTitle = document.createElement('div');
+        catTitle.className = "text-xs font-heading font-semibold text-slate-500 uppercase tracking-wider";
+        catTitle.textContent = cat.title;
+        groupWrapper.appendChild(catTitle);
+
+        const pillsWrap = document.createElement('div');
+        pillsWrap.className = "flex flex-wrap gap-2";
+
+        cat.keywords.forEach(kw => {
+            const fullTag = kw + " " + shortName;
+            const btn = document.createElement('button');
+            btn.type = "button";
+            btn.className = "text-xs bg-white hover:bg-brand-orange hover:text-white text-slate-700 font-medium px-3 py-1.5 rounded-lg border border-gray-200 transition shadow-sm";
+            btn.textContent = fullTag;
+            btn.onclick = () => {
+                const inqLoc = document.getElementById('inqLocation');
+                const inqEquip = document.getElementById('inqEquipment');
+                if (inqLoc && inqEquip) {
+                    inqLoc.value = cityFull;
+                    inqEquip.value = fullTag;
+                    const contactEl = document.getElementById('contact');
+                    if (contactEl) {
+                        contactEl.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    showToast("Pre-filled inquiry for " + fullTag);
+                } else {
+                    window.location.href = 'contact.html?equipment=' + encodeURIComponent(fullTag) + '&location=' + encodeURIComponent(cityFull);
+                }
+            };
+            pillsWrap.appendChild(btn);
+        });
+
+        groupWrapper.appendChild(pillsWrap);
+        container.appendChild(groupWrapper);
     });
 }
 

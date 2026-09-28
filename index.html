@@ -74,14 +74,14 @@
 
             <!-- Right: HQ Address & Action -->
             <div class="flex items-center gap-4 ml-auto">
-                <div class="hidden lg:flex items-center gap-1.5 text-gray-400 text-[11px]">
+                <div class="hidden lg:flex items-center gap-1.5 text-gray-300 text-xs">
                     <svg class="w-4 h-4 text-brand-orange shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                     </svg>
                     <span>291-292, Narayan Vihar, D Block, Asarpura Mod, Jaipur, RJ 302021</span>
                 </div>
-                <button onclick="openBrochureModal()" class="inline-flex items-center gap-1.5 bg-brand-orange hover:bg-brand-orangeLight text-white px-3 py-1 rounded text-[11px] font-heading font-bold tracking-wider uppercase transition shadow-sm">
+                <button onclick="openBrochureModal()" class="inline-flex items-center gap-1.5 bg-brand-orange hover:bg-brand-orangeLight text-white px-3.5 py-1.5 rounded text-xs font-heading font-bold tracking-wide transition shadow-sm">
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                     </svg>
@@ -174,24 +174,24 @@
                 <div class="lg:col-span-7 space-y-6">
                     <!-- Trust Badges -->
                     <div class="flex flex-wrap items-center gap-2.5">
-                        <span class="inline-flex items-center gap-1.5 bg-brand-orange/20 border border-brand-orange/50 text-brand-orangeLight px-3.5 py-1 rounded-full text-xs font-heading font-bold uppercase tracking-wider">
+                        <span class="inline-flex items-center gap-1.5 bg-brand-orange/20 border border-brand-orange/50 text-brand-orangeLight px-3.5 py-1 rounded-full text-xs font-heading font-semibold tracking-normal">
                             <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
                             20+ Years Experience
                         </span>
-                        <span class="inline-flex items-center gap-1.5 bg-brand-blue/40 border border-blue-400/30 text-blue-100 px-3.5 py-1 rounded-full text-xs font-heading font-semibold uppercase tracking-wider">
+                        <span class="inline-flex items-center gap-1.5 bg-brand-blue/40 border border-blue-400/30 text-blue-100 px-3.5 py-1 rounded-full text-xs font-heading font-semibold tracking-normal">
                             200+ Modern Crane Fleet
                         </span>
-                        <span class="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 text-gray-200 px-3.5 py-1 rounded-full text-xs font-heading font-semibold uppercase tracking-wider">
+                        <span class="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 text-gray-200 px-3.5 py-1 rounded-full text-xs font-heading font-semibold tracking-normal">
                             2T – 700T Lifting Capacity
                         </span>
                     </div>
 
                     <!-- Dynamic Hero Slide Text -->
                     <div id="heroSlideContainer" class="min-h-[190px] sm:min-h-[175px] flex flex-col justify-center transition-opacity duration-300">
-                        <p id="heroSub" class="text-brand-orangeLight font-heading font-bold text-sm sm:text-base uppercase tracking-widest mb-2">
-                            WE LIFT HEAVY, WE LIFT HIGH
+                        <p id="heroSub" class="text-brand-orangeLight font-heading font-bold text-sm sm:text-base tracking-wide mb-2">
+                            We Lift Heavy, We Lift High
                         </p>
-                        <h1 id="heroTitle" class="text-3xl sm:text-5xl lg:text-[50px] font-heading font-extrabold tracking-tight leading-[1.12] text-white">
+                        <h1 id="heroTitle" class="text-3xl sm:text-5xl font-heading font-extrabold tracking-tight leading-[1.12] text-white">
                             Modern Crane Company &amp; <span class="text-brand-orange">Professional Team</span>
                         </h1>
                         <p id="heroDesc" class="mt-4 text-base sm:text-lg text-gray-300 max-w-2xl font-light leading-relaxed">
@@ -217,10 +217,16 @@
 
                     <!-- Slider Dots & Location Highlights -->
                     <div class="pt-4 flex items-center justify-between border-t border-white/10">
-                        <div class="flex items-center gap-2" role="tablist" aria-label="Hero slides">
-                            <button onclick="setHeroSlide(0)" id="slideDot0" class="w-8 h-2.5 rounded-full bg-brand-orange transition-all" aria-label="Slide 1"></button>
-                            <button onclick="setHeroSlide(1)" id="slideDot1" class="w-2.5 h-2.5 rounded-full bg-white/30 hover:bg-white/60 transition-all" aria-label="Slide 2"></button>
-                            <button onclick="setHeroSlide(2)" id="slideDot2" class="w-2.5 h-2.5 rounded-full bg-white/30 hover:bg-white/60 transition-all" aria-label="Slide 3"></button>
+                        <div class="flex items-center gap-1" role="tablist" aria-label="Hero slides">
+                            <button onclick="setHeroSlide(0)" id="slideDot0" class="w-8 h-8 flex items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-brand-orange" role="tab" aria-selected="true" aria-label="Slide 1">
+                                <span class="dot-indicator w-8 h-2.5 rounded-full bg-brand-orange transition-all"></span>
+                            </button>
+                            <button onclick="setHeroSlide(1)" id="slideDot1" class="w-8 h-8 flex items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-brand-orange" role="tab" aria-selected="false" aria-label="Slide 2">
+                                <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition-all"></span>
+                            </button>
+                            <button onclick="setHeroSlide(2)" id="slideDot2" class="w-8 h-8 flex items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-brand-orange" role="tab" aria-selected="false" aria-label="Slide 3">
+                                <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition-all"></span>
+                            </button>
                         </div>
                         <div class="text-xs text-gray-300 flex items-center gap-2">
                             <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -231,45 +237,47 @@
 
                 <!-- Right Column: Interactive Cost & Capacity Estimator (5 Cols) -->
                 <div class="lg:col-span-5">
-                    <div class="bg-white text-slate-800 rounded-2xl shadow-2xl border-t-4 border-brand-orange p-6 sm:p-7 relative">
-                        <span class="text-xs font-heading font-bold uppercase tracking-widest text-brand-orange">
+                    <div class="bg-[#0B1A33]/90 border border-white/15 backdrop-blur-md text-white rounded-2xl shadow-2xl border-t-4 border-brand-orange p-6 sm:p-7 relative">
+                        <span class="text-xs font-heading font-bold uppercase tracking-wider text-brand-orangeLight">
                             Talk To Our Experts
                         </span>
-                        <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-brand-blueDark mt-0.5">
+                        <h2 class="text-xl sm:text-2xl font-heading font-extrabold text-white mt-0.5">
                             Crane Capacity &amp; Cost Estimator
                         </h2>
-                        <p class="text-xs text-slate-500 mt-1">
+                        <p class="text-xs text-gray-300 mt-1">
                             Calculate the recommended equipment and estimated rental range for your site lift.
                         </p>
 
                         <div class="mt-5 space-y-4">
                             <!-- Equipment Type Selection -->
                             <div>
-                                <label for="calcType" class="block text-xs font-heading font-bold uppercase text-slate-700 mb-1">
+                                <label for="calcType" class="block text-xs font-heading font-semibold text-gray-200 mb-1.5">
                                     1. Select Equipment Type
                                 </label>
-                                <select id="calcType" onchange="updateCraneEstimate()" class="w-full rounded-lg border border-gray-300 bg-brand-surface px-3.5 py-2.5 text-sm font-medium text-slate-800 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 focus:outline-none">
-                                    <option value="hydraulic">Hydraulic Mobile Crane (Telescopic)</option>
-                                    <option value="lattice">Lattice Boom / Crawler Crane (Up to 700T)</option>
-                                    <option value="pickcarry">Pick and Carry Crane (2T - 30T)</option>
-                                    <option value="trailer">Heavy Duty Low-Bed Trailer</option>
-                                    <option value="forklift">Industrial Forklift (2T - 25T)</option>
-                                    <option value="manlift">Manlift / Articulated Boom Lift</option>
+                                <select id="calcType" onchange="updateCraneEstimate()" class="w-full rounded-lg border border-white/20 bg-[#0E1E38] px-3.5 py-2.5 text-sm font-medium text-white focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/30 focus:outline-none">
+                                    <option value="hydraulic" class="bg-[#0E1E38] text-white">Hydraulic Mobile Crane (Telescopic)</option>
+                                    <option value="lattice" class="bg-[#0E1E38] text-white">Lattice Boom / Crawler Crane (Up to 700T)</option>
+                                    <option value="pickcarry" class="bg-[#0E1E38] text-white">Pick and Carry Crane (2T - 30T)</option>
+                                    <option value="trailer" class="bg-[#0E1E38] text-white">Heavy Duty Low-Bed Trailer</option>
+                                    <option value="forklift" class="bg-[#0E1E38] text-white">Industrial Forklift (2T - 25T)</option>
+                                    <option value="manlift" class="bg-[#0E1E38] text-white">Manlift / Articulated Boom Lift</option>
                                 </select>
                             </div>
 
                             <!-- Tonnage Slider (2T to 700T) -->
-                            <div>
-                                <div class="flex justify-between items-center mb-1">
-                                    <label for="calcTonnage" class="text-xs font-heading font-bold uppercase text-slate-700">
+                            <div class="py-1">
+                                <div class="flex justify-between items-center mb-2">
+                                    <label for="calcTonnage" class="text-xs font-heading font-semibold text-gray-200">
                                         2. Required Lifting Capacity
                                     </label>
-                                    <span id="calcTonnageLabel" class="bg-brand-blue text-white font-heading font-bold text-xs px-2.5 py-0.5 rounded">
+                                    <span id="calcTonnageLabel" class="bg-brand-orange text-white font-heading font-bold text-xs px-2.5 py-1 rounded">
                                         120 Tons
                                     </span>
                                 </div>
-                                <input id="calcTonnage" type="range" min="2" max="700" value="120" oninput="updateCraneEstimate()" class="crane-slider" />
-                                <div class="flex justify-between text-[11px] text-slate-400 font-medium mt-1">
+                                <div class="my-3 sm:my-4 py-1">
+                                    <input id="calcTonnage" type="range" min="2" max="700" value="120" oninput="updateCraneEstimate()" class="crane-slider w-full" aria-label="Target Lift Weight in Tons" aria-valuemin="2" aria-valuemax="700" aria-valuenow="120" />
+                                </div>
+                                <div class="flex justify-between text-xs text-gray-400 font-medium">
                                     <span>2 Tons</span>
                                     <span>150 Tons</span>
                                     <span>350 Tons</span>
@@ -280,59 +288,59 @@
                             <!-- Duration & Location Row -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <div>
-                                    <label for="calcDuration" class="block text-xs font-heading font-bold uppercase text-slate-700 mb-1">
+                                    <label for="calcDuration" class="block text-xs font-heading font-semibold text-gray-200 mb-1.5">
                                         3. Duration
                                     </label>
-                                    <select id="calcDuration" onchange="updateCraneEstimate()" class="w-full rounded-lg border border-gray-300 bg-brand-surface px-3 py-2 text-sm font-medium text-slate-800 focus:border-brand-blue focus:outline-none">
-                                        <option value="1">1 Shift (8 Hours)</option>
-                                        <option value="3">3 Days Project</option>
-                                        <option value="7" selected>1 Week (7 Days)</option>
-                                        <option value="26">1 Month Contract</option>
+                                    <select id="calcDuration" onchange="updateCraneEstimate()" class="w-full rounded-lg border border-white/20 bg-[#0E1E38] px-3 py-2 text-sm font-medium text-white focus:border-brand-orange focus:outline-none">
+                                        <option value="1" class="bg-[#0E1E38] text-white">1 Shift (8 Hours)</option>
+                                        <option value="3" class="bg-[#0E1E38] text-white">3 Days Project</option>
+                                        <option value="7" class="bg-[#0E1E38] text-white" selected>1 Week (7 Days)</option>
+                                        <option value="26" class="bg-[#0E1E38] text-white">1 Month Contract</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="calcLocation" class="block text-xs font-heading font-bold uppercase text-slate-700 mb-1">
+                                    <label for="calcLocation" class="block text-xs font-heading font-semibold text-gray-200 mb-1.5">
                                         4. Project Site Hub
                                     </label>
-                                    <select id="calcLocation" onchange="updateCraneEstimate()" class="w-full rounded-lg border border-gray-300 bg-brand-surface px-3 py-2 text-sm font-medium text-slate-800 focus:border-brand-blue focus:outline-none">
-                                        <option value="Jaipur, Rajasthan">Jaipur, Rajasthan (HQ)</option>
-                                        <option value="Panipat, Haryana">Panipat, Haryana</option>
-                                        <option value="Pachpadra, Rajasthan">Pachpadra, Rajasthan</option>
-                                        <option value="Barmer, Rajasthan">Barmer, Rajasthan</option>
-                                        <option value="Chittorgarh, Rajasthan">Chittorgarh, Rajasthan</option>
+                                    <select id="calcLocation" onchange="updateCraneEstimate()" class="w-full rounded-lg border border-white/20 bg-[#0E1E38] px-3 py-2 text-sm font-medium text-white focus:border-brand-orange focus:outline-none">
+                                        <option value="Jaipur, Rajasthan" class="bg-[#0E1E38] text-white">Jaipur, Rajasthan (HQ)</option>
+                                        <option value="Panipat, Haryana" class="bg-[#0E1E38] text-white">Panipat, Haryana</option>
+                                        <option value="Pachpadra, Rajasthan" class="bg-[#0E1E38] text-white">Pachpadra, Rajasthan</option>
+                                        <option value="Barmer, Rajasthan" class="bg-[#0E1E38] text-white">Barmer, Rajasthan</option>
+                                        <option value="Chittorgarh, Rajasthan" class="bg-[#0E1E38] text-white">Chittorgarh, Rajasthan</option>
                                     </select>
                                 </div>
                             </div>
 
                             <!-- Live Recommendation & Estimate Box -->
-                            <div class="bg-brand-blueLight/70 border border-brand-blue/20 rounded-xl p-4">
+                            <div class="bg-white/10 border border-white/15 rounded-xl p-4">
                                 <div class="flex items-center justify-between">
                                     <div>
-                                        <span class="text-[11px] font-heading font-bold uppercase tracking-wider text-brand-blue">
+                                        <span class="text-xs font-heading font-bold uppercase tracking-wider text-brand-orangeLight">
                                             Recommended Configuration
                                         </span>
-                                        <p id="calcRecModel" class="font-heading font-bold text-sm text-brand-blueDark mt-0.5">
+                                        <p id="calcRecModel" class="font-heading font-bold text-sm text-white mt-0.5">
                                             120T Hydraulic Telescopic Crane + SLI
                                         </p>
                                     </div>
                                     <div class="text-right">
-                                        <span class="text-[11px] text-slate-500 block">Est. Base Range</span>
+                                        <span class="text-xs text-gray-300 block">Est. Base Range</span>
                                         <span id="calcPriceOutput" class="font-heading font-extrabold text-lg text-brand-orange">
                                             ₹1,45,000*
                                         </span>
                                     </div>
                                 </div>
-                                <p class="text-[11px] text-slate-500 mt-2 flex items-center gap-1.5">
-                                    <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <p class="text-xs text-gray-300 mt-2 flex items-center gap-1.5">
+                                    <svg class="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
                                     </svg>
                                     Includes certified operator, Safe Load Indicator (SLI) &amp; pre-checked rigging gear.
                                 </p>
                             </div>
 
-                            <button type="button" onclick="applyEstimateToForm()" class="w-full bg-brand-blue hover:bg-brand-blueDark text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl shadow transition flex items-center justify-center gap-2">
+                            <button type="button" onclick="applyEstimateToForm()" class="w-full bg-brand-orange hover:bg-brand-orangeLight text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl shadow-orange-glow transition flex items-center justify-center gap-2">
                                 <span>Lock Estimate &amp; Request Official Quote</span>
-                                <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                                 </svg>
                             </button>
@@ -477,17 +485,17 @@
                 </div>
 
                 <!-- Category Filter Buttons -->
-                <div class="flex flex-wrap gap-2" role="group" aria-label="Filter equipment">
-                    <button onclick="filterEquipment('all')" data-filter="all" class="equip-filter-btn active bg-brand-blue text-white font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg transition">
+                <div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 no-scrollbar max-w-full" role="group" aria-label="Filter equipment">
+                    <button onclick="filterEquipment('all')" data-filter="all" class="equip-filter-btn active bg-brand-blue text-white font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg shrink-0 transition">
                         All Fleet
                     </button>
-                    <button onclick="filterEquipment('heavy')" data-filter="heavy" class="equip-filter-btn bg-white text-slate-700 hover:bg-brand-blueLight font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg border border-gray-200 transition">
+                    <button onclick="filterEquipment('heavy')" data-filter="heavy" class="equip-filter-btn bg-white text-slate-700 hover:bg-brand-blueLight font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg border border-gray-200 shrink-0 transition">
                         Heavy Cranes
                     </button>
-                    <button onclick="filterEquipment('mobile')" data-filter="mobile" class="equip-filter-btn bg-white text-slate-700 hover:bg-brand-blueLight font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg border border-gray-200 transition">
+                    <button onclick="filterEquipment('mobile')" data-filter="mobile" class="equip-filter-btn bg-white text-slate-700 hover:bg-brand-blueLight font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg border border-gray-200 shrink-0 transition">
                         Mobile &amp; Yard
                     </button>
-                    <button onclick="filterEquipment('logistics')" data-filter="logistics" class="equip-filter-btn bg-white text-slate-700 hover:bg-brand-blueLight font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg border border-gray-200 transition">
+                    <button onclick="filterEquipment('logistics')" data-filter="logistics" class="equip-filter-btn bg-white text-slate-700 hover:bg-brand-blueLight font-heading font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg border border-gray-200 shrink-0 transition">
                         Transport &amp; Access
                     </button>
                 </div>
@@ -911,7 +919,7 @@
                 <div class="p-6 rounded-2xl bg-brand-surface border border-gray-200 hover:border-brand-orange transition flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-blue text-white flex items-center justify-center shrink-0 font-bold">01</div>
                     <div>
-                        <h4 class="font-heading font-extrabold text-base text-brand-blueDark">Eastern Peripheral Expressway</h4>
+                        <h3 class="font-heading font-extrabold text-base text-brand-blueDark">Eastern Peripheral Expressway</h3>
                         <p class="text-xs text-slate-500 mt-1">Kundli Mega Expressway Project heavy girder &amp; structural crane operations.</p>
                     </div>
                 </div>
@@ -919,7 +927,7 @@
                 <div class="p-6 rounded-2xl bg-brand-surface border border-gray-200 hover:border-brand-orange transition flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-orange text-white flex items-center justify-center shrink-0 font-bold">02</div>
                     <div>
-                        <h4 class="font-heading font-extrabold text-base text-brand-blueDark">Agra-Lucknow Expressway</h4>
+                        <h3 class="font-heading font-extrabold text-base text-brand-blueDark">Agra-Lucknow Expressway</h3>
                         <p class="text-xs text-slate-500 mt-1">Expressway heavy civil lifting, flyover staging, and precision placement.</p>
                     </div>
                 </div>
@@ -927,7 +935,7 @@
                 <div class="p-6 rounded-2xl bg-brand-surface border border-gray-200 hover:border-brand-orange transition flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-blue text-white flex items-center justify-center shrink-0 font-bold">03</div>
                     <div>
-                        <h4 class="font-heading font-extrabold text-base text-brand-blueDark">Bhavnagar - Talaja Road Project</h4>
+                        <h3 class="font-heading font-extrabold text-base text-brand-blueDark">Bhavnagar - Talaja Road Project</h3>
                         <p class="text-xs text-slate-500 mt-1">Gujarat highway corridor construction and bridge structure erection.</p>
                     </div>
                 </div>
@@ -935,7 +943,7 @@
                 <div class="p-6 rounded-2xl bg-brand-surface border border-gray-200 hover:border-brand-orange transition flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-orange text-white flex items-center justify-center shrink-0 font-bold">04</div>
                     <div>
-                        <h4 class="font-heading font-extrabold text-base text-brand-blueDark">Railway Underpass Box Erection</h4>
+                        <h3 class="font-heading font-extrabold text-base text-brand-blueDark">Railway Underpass Box Erection</h3>
                         <p class="text-xs text-slate-500 mt-1">Precast RCC box culvert and underpass launching in Rajasthan &amp; Madhya Pradesh.</p>
                     </div>
                 </div>
@@ -943,7 +951,7 @@
                 <div class="p-6 rounded-2xl bg-brand-surface border border-gray-200 hover:border-brand-orange transition flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-blue text-white flex items-center justify-center shrink-0 font-bold">05</div>
                     <div>
-                        <h4 class="font-heading font-extrabold text-base text-brand-blueDark">40 mtr Tower Erection Projects</h4>
+                        <h3 class="font-heading font-extrabold text-base text-brand-blueDark">40 mtr Tower Erection Projects</h3>
                         <p class="text-xs text-slate-500 mt-1">High-voltage transmission and telecom lattice tower erection across all Rajasthan.</p>
                     </div>
                 </div>
@@ -951,7 +959,7 @@
                 <div class="p-6 rounded-2xl bg-brand-surface border border-gray-200 hover:border-brand-orange transition flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-brand-orange text-white flex items-center justify-center shrink-0 font-bold">06</div>
                     <div>
-                        <h4 class="font-heading font-extrabold text-base text-brand-blueDark">Jaipur Metro Project</h4>
+                        <h3 class="font-heading font-extrabold text-base text-brand-blueDark">Jaipur Metro Project</h3>
                         <p class="text-xs text-slate-500 mt-1">Urban metro rail pier cap, heavy girder, and station structural lifting.</p>
                     </div>
                 </div>
@@ -983,14 +991,14 @@
                             </div>
                             <div>
                                 <div class="font-heading font-bold text-xs text-brand-blueDark">Deepak Singh</div>
-                                <div class="text-[11px] text-slate-400">Industrial Project Lead</div>
+                                <div class="text-xs text-slate-500">Industrial Project Lead</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Review 2 -->
                     <div class="bg-brand-surface rounded-2xl p-7 border-2 border-brand-orange flex flex-col justify-between relative shadow-sm">
-                        <span class="absolute -top-3 right-4 bg-brand-orange text-white text-[10px] font-heading font-bold uppercase px-2.5 py-0.5 rounded">
+                        <span class="absolute -top-3 right-4 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-2.5 py-0.5 rounded">
                             Verified Review
                         </span>
                         <div>
@@ -1005,7 +1013,7 @@
                             </div>
                             <div>
                                 <div class="font-heading font-bold text-xs text-brand-blueDark">Rakesh Sharma</div>
-                                <div class="text-[11px] text-slate-400">Operations Manager</div>
+                                <div class="text-xs text-slate-500">Operations Manager</div>
                             </div>
                         </div>
                     </div>
@@ -1024,7 +1032,7 @@
                             </div>
                             <div>
                                 <div class="font-heading font-bold text-xs text-brand-blueDark">Rohit Kumar</div>
-                                <div class="text-[11px] text-slate-400">Site Operations Lead</div>
+                                <div class="text-xs text-slate-500">Site Operations Lead</div>
                             </div>
                         </div>
                     </div>
@@ -1089,31 +1097,31 @@
             <!-- 5 Hub Selector Buttons -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
                 <button onclick="selectHub('Jaipur, Rajasthan')" id="hubBtn-Jaipur" class="hub-card active text-left p-5 rounded-2xl border-2 border-brand-blue bg-brand-blueLight/60 transition">
-                    <span class="text-[10px] font-heading font-bold uppercase px-2 py-0.5 rounded bg-brand-blue text-white">HQ Hub</span>
+                    <span class="text-xs font-heading font-bold uppercase px-2 py-0.5 rounded bg-brand-blue text-white">HQ Hub</span>
                     <h3 class="font-heading font-extrabold text-base text-brand-blueDark mt-2">Jaipur, RJ</h3>
                     <p class="text-xs text-slate-600 mt-1">Narayan Vihar HQ • 24/7 Dispatch</p>
                 </button>
 
                 <button onclick="selectHub('Panipat, Haryana')" id="hubBtn-Panipat" class="hub-card text-left p-5 rounded-2xl border border-gray-200 bg-brand-surface hover:border-brand-orange transition">
-                    <span class="text-[10px] font-heading font-bold uppercase px-2 py-0.5 rounded bg-brand-orange/20 text-brand-orange">Refinery &amp; Plant</span>
+                    <span class="text-xs font-heading font-bold uppercase px-2 py-0.5 rounded bg-brand-orange/20 text-brand-orange">Refinery &amp; Plant</span>
                     <h3 class="font-heading font-extrabold text-base text-brand-blueDark mt-2">Panipat, HR</h3>
                     <p class="text-xs text-slate-600 mt-1">Hydraulic &amp; Crawler Cranes</p>
                 </button>
 
                 <button onclick="selectHub('Pachpadra, Rajasthan')" id="hubBtn-Pachpadra" class="hub-card text-left p-5 rounded-2xl border border-gray-200 bg-brand-surface hover:border-brand-orange transition">
-                    <span class="text-[10px] font-heading font-bold uppercase px-2 py-0.5 rounded bg-brand-orange/20 text-brand-orange">Refinery Mega Hub</span>
+                    <span class="text-xs font-heading font-bold uppercase px-2 py-0.5 rounded bg-brand-orange/20 text-brand-orange">Refinery Mega Hub</span>
                     <h3 class="font-heading font-extrabold text-base text-brand-blueDark mt-2">Pachpadra, RJ</h3>
                     <p class="text-xs text-slate-600 mt-1">Heavy Lattice &amp; Telescopic Lifts</p>
                 </button>
 
                 <button onclick="selectHub('Barmer, Rajasthan')" id="hubBtn-Barmer" class="hub-card text-left p-5 rounded-2xl border border-gray-200 bg-brand-surface hover:border-brand-orange transition">
-                    <span class="text-[10px] font-heading font-bold uppercase px-2 py-0.5 rounded bg-brand-orange/20 text-brand-orange">Energy &amp; Wind</span>
+                    <span class="text-xs font-heading font-bold uppercase px-2 py-0.5 rounded bg-brand-orange/20 text-brand-orange">Energy &amp; Wind</span>
                     <h3 class="font-heading font-extrabold text-base text-brand-blueDark mt-2">Barmer, RJ</h3>
                     <p class="text-xs text-slate-600 mt-1">Windmill, Solar &amp; Oilfield</p>
                 </button>
 
                 <button onclick="selectHub('Chittorgarh, Rajasthan')" id="hubBtn-Chittorgarh" class="hub-card text-left p-5 rounded-2xl border border-gray-200 bg-brand-surface hover:border-brand-orange transition">
-                    <span class="text-[10px] font-heading font-bold uppercase px-2 py-0.5 rounded bg-brand-orange/20 text-brand-orange">Cement &amp; Infra</span>
+                    <span class="text-xs font-heading font-bold uppercase px-2 py-0.5 rounded bg-brand-orange/20 text-brand-orange">Cement &amp; Infra</span>
                     <h3 class="font-heading font-extrabold text-base text-brand-blueDark mt-2">Chittorgarh, RJ</h3>
                     <p class="text-xs text-slate-600 mt-1">Industrial Plant Maintenance</p>
                 </button>
@@ -1121,14 +1129,14 @@
 
             <!-- Keyword Tags Box -->
             <div class="bg-brand-surface rounded-2xl p-6 border border-gray-200">
-                <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
-                    <h4 id="activeHubTitle" class="font-heading font-bold text-sm text-brand-blueDark uppercase">
+                <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
+                    <h4 id="activeHubTitle" class="font-heading font-bold text-sm text-brand-blueDark">
                         Available Services in Jaipur, Rajasthan (Click to Inquire):
                     </h4>
                     <span class="text-xs text-brand-orange font-semibold">24/7 Crane Rental &amp; Heavy Lifting</span>
                 </div>
-                <div id="hubKeywordsContainer" class="flex flex-wrap gap-2">
-                    <!-- Dynamic Hub Keywords -->
+                <div id="hubKeywordsContainer" class="space-y-4">
+                    <!-- Categorized Hub Keywords rendered via JS -->
                 </div>
             </div>
         </div>
@@ -1161,16 +1169,19 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <div class="text-xs font-heading font-bold uppercase text-brand-orangeLight">24/7 Helpline Numbers</div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-heading font-bold uppercase text-brand-orangeLight">24/7 Helpline Numbers</span>
+                                    <button onclick="copyText('+917822022220', 'Primary Phone Number')" aria-label="Copy primary phone number" class="inline-flex items-center gap-1 text-xs bg-white/10 hover:bg-white/20 px-2.5 py-1 rounded text-gray-200 transition">
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                        Copy
+                                    </button>
+                                </div>
                                 <div class="mt-1 space-y-0.5 text-sm font-semibold">
                                     <div><a href="tel:+917822022220" class="hover:text-brand-orange transition">+91-7822022220</a></div>
                                     <div><a href="tel:+919923288888" class="hover:text-brand-orange transition">+91-9923288888</a></div>
                                     <div><a href="tel:+919314661171" class="hover:text-brand-orange transition">+91-9314661171</a></div>
                                 </div>
                             </div>
-                            <button onclick="copyText('+917822022220', 'Primary Phone Number')" class="text-xs bg-white/10 hover:bg-white/20 px-2.5 py-1.5 rounded text-gray-200 transition">
-                                Copy
-                            </button>
                         </div>
 
                         <!-- Address Card -->
@@ -1198,15 +1209,18 @@
                                 </svg>
                             </div>
                             <div class="flex-1">
-                                <div class="text-xs font-heading font-bold uppercase text-brand-orangeLight">Official Emails</div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs font-heading font-bold uppercase text-brand-orangeLight">Official Emails</span>
+                                    <button onclick="copyText('sales@panditcrane.com', 'Sales Email')" aria-label="Copy sales email address" class="inline-flex items-center gap-1 text-xs bg-white/10 hover:bg-white/20 px-2.5 py-1 rounded text-gray-200 transition">
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                        Copy
+                                    </button>
+                                </div>
                                 <div class="mt-1 space-y-0.5 text-sm">
                                     <div><a href="mailto:info@panditcrane.com" class="hover:text-brand-orange transition">info@panditcrane.com</a></div>
                                     <div><a href="mailto:sales@panditcrane.com" class="hover:text-brand-orange transition">sales@panditcrane.com</a></div>
                                 </div>
                             </div>
-                            <button onclick="copyText('sales@panditcrane.com', 'Sales Email')" class="text-xs bg-white/10 hover:bg-white/20 px-2.5 py-1.5 rounded text-gray-200 transition">
-                                Copy
-                            </button>
                         </div>
                     </div>
                 </div>
