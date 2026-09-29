@@ -13,8 +13,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 /* --- Reset & Base Typography --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -22,8 +28,16 @@ body {
     color: #1e293b;
     background-color: #FFFFFF;
     overflow-x: hidden;
+    width: 100%;
     margin: 0;
     padding: 0;
+    -webkit-text-size-adjust: 100%;
+}
+
+img, video, iframe, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
@@ -359,4 +373,80 @@ input[type=range].crane-slider:active::-moz-range-thumb {
     background-color: #204E9A;
     color: #FFFFFF;
     border-color: #204E9A;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS & MEDIA QUERIES
+   ========================================================================== */
+
+/* --- Tablet / Large Mobile Viewports (<= 768px) --- */
+@media (max-width: 768px) {
+    /* Responsive Container Padding */
+    .site-container,
+    section > div[class*="max-w-"] {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Stack Multi-Column Grids */
+    .grid-stack-mobile,
+    .mobile-stack {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Input & Button Touch Target Optimization */
+    input, select, textarea, button, a.btn-primary, a.btn-secondary, a.btn-outline {
+        min-height: 44px;
+        font-size: 14px;
+    }
+
+    /* Prevent text overflowing small mobile devices */
+    h1 {
+        font-size: 1.85rem !important;
+        line-height: 1.2 !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.25 !important;
+    }
+
+    /* Touch-friendly modal dismiss buttons */
+    .modal-close-btn {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* --- Small Mobile Viewports (<= 480px) --- */
+@media (max-width: 480px) {
+    /* Tighten section vertical padding for faster scrolling */
+    section {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    /* Ensure flex groups wrap cleanly */
+    .flex-wrap-mobile {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .flex-wrap-mobile > * {
+        width: 100% !important;
+    }
+
+    /* Mobile Sticky Bar Touch Sizing */
+    aside[aria-label="Quick mobile actions"] a {
+        min-height: 42px;
+        font-size: 0.72rem;
+    }
+
+    /* Hide redundant decorative elements */
+    .hide-on-mobile {
+        display: none !important;
+    }
 }

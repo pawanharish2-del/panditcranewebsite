@@ -91,7 +91,7 @@
         </div>
     </div>
 
-    <!-- MAIN HEADER NAVIGATION (DARK BLUEPRINT THEME) -->
+    <!-- MAIN HEADER NAVIGATION (5 CORE LINKS) -->
     <header id="navbar" class="sticky top-0 z-40 site-header transition-all duration-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20 sm:h-24">
@@ -101,20 +101,17 @@
                     <img src="images/logo.png" alt="Pandit Crane Service Logo" class="h-14 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-md">
                 </a>
 
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden xl:flex items-center space-x-6 text-sm font-heading">
+                <!-- Desktop Navigation Links (5 Core Links) -->
+                <nav class="hidden lg:flex items-center space-x-7 text-sm font-heading">
                     <a href="index.html" class="nav-link active py-2">Home</a>
-                    <a href="about.html" class="nav-link py-2">About</a>
-                    <a href="services.html" class="nav-link py-2">Our Equipment</a>
-                    <a href="our-services.html" class="nav-link py-2">Our Services</a>
-                    <a href="our-clients.html" class="nav-link py-2">Our Clients</a>
+                    <a href="equipment.html" class="nav-link py-2">Equipment</a>
                     <a href="gallery.html" class="nav-link py-2">Gallery</a>
-                    <a href="blog.html" class="nav-link py-2">Blog</a>
-                    <a href="contact.html" class="nav-link py-2">Contact Us</a>
+                    <a href="about.html" class="nav-link py-2">About</a>
+                    <a href="contact.html" class="nav-link py-2">Contact</a>
                 </nav>
 
                 <!-- Action Button -->
-                <div class="hidden md:flex items-center gap-3">
+                <div class="hidden lg:flex items-center gap-3">
                     <a href="contact.html" class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeLight text-white font-heading font-bold text-xs uppercase tracking-wider px-5 py-3 rounded-lg shadow-orange-glow transition transform hover:-translate-y-0.5">
                         <span>Get Quote</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
@@ -124,7 +121,7 @@
                 </div>
 
                 <!-- Mobile Hamburger Button -->
-                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="xl:hidden p-2.5 rounded-lg text-white hover:bg-white/10 focus:outline-none" aria-label="Toggle Menu">
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-lg text-white hover:bg-white/10 focus:outline-none" aria-label="Toggle Menu" aria-expanded="false">
                     <svg id="menuIconOpen" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
                     </svg>
@@ -135,23 +132,20 @@
             </div>
         </div>
 
-        <!-- Mobile Navigation Menu -->
-        <div id="mobileMenu" class="hidden xl:hidden bg-[#091528] border-t border-white/10 px-4 pt-3 pb-6 space-y-3 shadow-2xl">
-            <div class="grid grid-cols-2 gap-2 font-heading font-semibold text-sm text-gray-200">
-                <a href="index.html" class="p-2.5 rounded-lg bg-brand-orange/20 text-brand-orange font-bold">Home</a>
-                <a href="about.html" class="p-2.5 rounded-lg hover:bg-white/10">About</a>
-                <a href="services.html" class="p-2.5 rounded-lg hover:bg-white/10">Our Equipment</a>
-                <a href="our-services.html" class="p-2.5 rounded-lg hover:bg-white/10">Our Services</a>
-                <a href="our-clients.html" class="p-2.5 rounded-lg hover:bg-white/10">Our Clients</a>
-                <a href="gallery.html" class="p-2.5 rounded-lg hover:bg-white/10">Gallery</a>
-                <a href="blog.html" class="p-2.5 rounded-lg hover:bg-white/10">Blog</a>
-                <a href="contact.html" class="p-2.5 rounded-lg hover:bg-white/10">Contact Us</a>
+        <!-- Mobile Navigation Menu (5 Core Links) -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#091528] border-t border-white/10 px-4 pt-3 pb-6 space-y-3 shadow-2xl">
+            <div class="flex flex-col space-y-1 font-heading font-semibold text-sm text-gray-200">
+                <a href="index.html" class="p-3 rounded-xl bg-brand-orange/20 text-brand-orange font-bold">Home</a>
+                <a href="equipment.html" class="p-3 rounded-xl hover:bg-white/10 transition">Equipment</a>
+                <a href="gallery.html" class="p-3 rounded-xl hover:bg-white/10 transition">Gallery</a>
+                <a href="about.html" class="p-3 rounded-xl hover:bg-white/10 transition">About</a>
+                <a href="contact.html" class="p-3 rounded-xl hover:bg-white/10 transition">Contact</a>
             </div>
             <div class="pt-3 border-t border-white/10 flex flex-col sm:flex-row gap-2.5">
-                <button onclick="openBrochureModal(); toggleMobileMenu();" class="w-full py-2.5 border border-white/30 text-white font-heading font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-white/10">
+                <button onclick="openBrochureModal(); toggleMobileMenu();" class="w-full py-3 border border-white/30 text-white font-heading font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-white/10">
                     Download Brochure
                 </button>
-                <a href="contact.html" class="w-full py-3 bg-brand-orange text-white text-center font-heading font-bold text-xs uppercase tracking-wider rounded-lg shadow-orange-glow">
+                <a href="contact.html" class="w-full py-3 bg-brand-orange text-white text-center font-heading font-bold text-xs uppercase tracking-wider rounded-xl shadow-orange-glow">
                     Request Fast Quote
                 </a>
             </div>
@@ -498,170 +492,269 @@
                 </div>
             </div>
 
-            <!-- Equipment Cards Grid -->
-            <div id="equipmentGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Equipment Cards Grid (Scannable Specs & Direct CTA) -->
+            <div id="equipmentGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 
                 <!-- Card 1: Hydraulic Crane -->
-                <div data-category="heavy" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition-all duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative group">
-                        <img src="images/1.jpg" alt="Hydraulic Telescopic Crane" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-2.5 py-1 rounded shadow">
-                            20T – 500T Capacity
+                <div data-category="heavy" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition flex flex-col">
+                    <div class="h-52 overflow-hidden relative cursor-pointer" onclick="openLightbox('images/1.jpg', 'Hydraulic Telescopic Mobile Crane (20T - 500T)')">
+                        <img src="images/1.jpg" alt="Hydraulic Telescopic Crane" class="w-full h-full object-cover transition duration-300 hover:scale-105">
+                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-3 py-1 rounded-lg shadow">
+                            20T – 500T
                         </span>
-                        <span class="absolute top-3 right-3 bg-brand-blueDark/80 text-white text-xs font-semibold px-2.5 py-1 rounded backdrop-blur-sm">
+                        <span class="absolute top-3 right-3 bg-brand-blueDark/80 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg">
                             SLI Equipped
                         </span>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xl font-heading font-extrabold text-brand-blueDark">Hydraulic Crane</h3>
-                            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-                                All-terrain telescopic boom and hydraulic mobile cranes equipped with Safe Load Indicator (SLI) devices to alert operators and ensure safe heavy lifts.
-                            </p>
+                            <h3 class="text-lg font-heading font-extrabold text-brand-blueDark">Hydraulic Telescopic Crane</h3>
+                            
+                            <div class="mt-4 space-y-2 text-xs">
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Capacity:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">20 Tons – 500 Tons</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Boom Length:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">Up to 100m + Fly Jib</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Ideal Use Case:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark text-right">Refineries, Bridges &amp; Plants</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Safety Feature:</span>
+                                    <span class="font-heading font-bold text-emerald-700">Safe Load Indicator (SLI)</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-6 flex items-center gap-3">
-                            <a href="images/Hydraulic-crane.pdf" target="_blank" class="flex-1 text-center py-2.5 border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-heading font-bold text-xs tracking-wide rounded-xl transition">
-                                View Specs
+
+                        <div class="mt-6">
+                            <a href="https://wa.me/917822022220?text=Hello%20Pandit%20Crane%20Service,%20I%20am%20interested%20in%20renting%20a%20Hydraulic%20Telescopic%20Crane" target="_blank" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl shadow transition">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                <span>Call / WhatsApp Now</span>
                             </a>
-                            <button onclick="selectEquipmentForQuote('Hydraulic Crane (20T - 500T)')" class="flex-1 py-2.5 bg-brand-orange hover:bg-brand-orangeLight text-white font-heading font-bold text-xs tracking-wide rounded-xl shadow transition">
-                                Book Crane
-                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2: Pick and Carry Crane -->
-                <div data-category="mobile" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition-all duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative group">
-                        <img src="images/6.jpg" alt="Pick and Carry Crane" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-2.5 py-1 rounded shadow">
-                            2T – 30T Capacity
+                <!-- Card 2: Lattice Boom Crane -->
+                <div data-category="heavy" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition flex flex-col">
+                    <div class="h-52 overflow-hidden relative cursor-pointer" onclick="openLightbox('images/12.jpg', 'Lattice Boom Crawler Crane (80T - 700T)')">
+                        <img src="images/12.jpg" alt="Lattice Boom Crane" class="w-full h-full object-cover transition duration-300 hover:scale-105">
+                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-3 py-1 rounded-lg shadow">
+                            80T – 700T Max
                         </span>
-                        <span class="absolute top-3 right-3 bg-brand-blueDark/80 text-white text-xs font-semibold px-2.5 py-1 rounded backdrop-blur-sm">
-                            Fast Mobility
+                        <span class="absolute top-3 right-3 bg-brand-blueDark/80 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg">
+                            Heavy Rig
                         </span>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xl font-heading font-extrabold text-brand-blueDark">Pick and Carry Crane</h3>
-                            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-                                High-maneuverability next-gen pick and carry cranes ideal for rapid industrial yard loading, plant maintenance, and confined construction sites.
-                            </p>
+                            <h3 class="text-lg font-heading font-extrabold text-brand-blueDark">Lattice Boom Crawler Crane</h3>
+                            
+                            <div class="mt-4 space-y-2 text-xs">
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Capacity:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">80 Tons – 700 Tons</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Boom Length:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">Modular Up to 150m</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Ideal Use Case:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark text-right">Windmills, Thermal &amp; Solar</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Base:</span>
+                                    <span class="font-heading font-bold text-brand-orange">Wide Crawler Track Spread</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-6 flex items-center gap-3">
-                            <a href="services.html#pickcarry" class="flex-1 text-center py-2.5 border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-heading font-bold text-xs tracking-wide rounded-xl transition">
-                                View Specs
+
+                        <div class="mt-6">
+                            <a href="https://wa.me/917822022220?text=Hello%20Pandit%20Crane%20Service,%20I%20am%20interested%20in%20renting%20a%20Lattice%20Boom%20Crawler%20Crane" target="_blank" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl shadow transition">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                <span>Call / WhatsApp Now</span>
                             </a>
-                            <button onclick="selectEquipmentForQuote('Pick and Carry Crane (2T - 30T)')" class="flex-1 py-2.5 bg-brand-orange hover:bg-brand-orangeLight text-white font-heading font-bold text-xs tracking-wide rounded-xl shadow transition">
-                                Book Crane
-                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3: Lattice Boom Cranes -->
-                <div data-category="heavy" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition-all duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative group">
-                        <img src="images/12.jpg" alt="Lattice Boom Crane" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-2.5 py-1 rounded shadow">
-                            80T – 700T Capacity
+                <!-- Card 3: Pick and Carry Crane -->
+                <div data-category="mobile" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition flex flex-col">
+                    <div class="h-52 overflow-hidden relative cursor-pointer" onclick="openLightbox('images/6.jpg', 'Pick & Carry Industrial Crane (2T - 30T)')">
+                        <img src="images/6.jpg" alt="Pick and Carry Crane" class="w-full h-full object-cover transition duration-300 hover:scale-105">
+                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-3 py-1 rounded-lg shadow">
+                            2T – 30T Fast
                         </span>
-                        <span class="absolute top-3 right-3 bg-brand-blueDark/80 text-white text-xs font-semibold px-2.5 py-1 rounded backdrop-blur-sm">
-                            Ultra Heavy Lift
+                        <span class="absolute top-3 right-3 bg-brand-blueDark/80 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg">
+                            Agile Hydra
                         </span>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xl font-heading font-extrabold text-brand-blueDark">Lattice Boom Cranes</h3>
-                            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-                                Heavy-duty crawler and lattice boom cranes engineered for windmill erection, solar installations, refinery vessels, and bridge girders up to 700 tons.
-                            </p>
+                            <h3 class="text-lg font-heading font-extrabold text-brand-blueDark">Pick &amp; Carry Hydra Crane</h3>
+                            
+                            <div class="mt-4 space-y-2 text-xs">
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Capacity:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">2 Tons – 30 Tons</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Boom Length:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">Telescopic Up to 22m</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Ideal Use Case:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark text-right">Yards, Workshops &amp; Piping</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Dispatch:</span>
+                                    <span class="font-heading font-bold text-emerald-700">Same-Day Site Delivery</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-6 flex items-center gap-3">
-                            <a href="images/Lattice-boom.pdf" target="_blank" class="flex-1 text-center py-2.5 border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-heading font-bold text-xs tracking-wide rounded-xl transition">
-                                View Specs
+
+                        <div class="mt-6">
+                            <a href="https://wa.me/917822022220?text=Hello%20Pandit%20Crane%20Service,%20I%20am%20interested%20in%20renting%20a%20Pick%20and%20Carry%20Crane" target="_blank" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl shadow transition">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                <span>Call / WhatsApp Now</span>
                             </a>
-                            <button onclick="selectEquipmentForQuote('Lattice Boom Crane (Up to 700T)')" class="flex-1 py-2.5 bg-brand-orange hover:bg-brand-orangeLight text-white font-heading font-bold text-xs tracking-wide rounded-xl shadow transition">
-                                Book Crane
-                            </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 4: Heavy Trailers -->
-                <div data-category="logistics" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition-all duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative group">
-                        <img src="images/5.jpg" alt="Heavy Logistics Trailers" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-2.5 py-1 rounded shadow">
-                            Heavy Logistics
+                <div data-category="logistics" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition flex flex-col">
+                    <div class="h-52 overflow-hidden relative cursor-pointer" onclick="openLightbox('images/5.jpg', 'Heavy Duty Low-Bed & Multi-Axle Trailers')">
+                        <img src="images/5.jpg" alt="Heavy Logistics Trailers" class="w-full h-full object-cover transition duration-300 hover:scale-105">
+                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-3 py-1 rounded-lg shadow">
+                            20T – 250T ODC
+                        </span>
+                        <span class="absolute top-3 right-3 bg-brand-blueDark/80 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg">
+                            Logistics
                         </span>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xl font-heading font-extrabold text-brand-blueDark">Trailers &amp; Low-Beds</h3>
-                            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-                                Flatbed, semi-low bed, and hydraulic axle trailers for oversized industrial cargo, crane counterweights, and interstate project logistics.
-                            </p>
+                            <h3 class="text-lg font-heading font-extrabold text-brand-blueDark">Low-Bed &amp; Multi-Axle Trailers</h3>
+                            
+                            <div class="mt-4 space-y-2 text-xs">
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Capacity:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">20 Tons – 250 Tons</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Deck Type:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">Low-Bed &amp; Modular Axles</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Ideal Use Case:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark text-right">ODC Cargo, Plants &amp; Boilers</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Permits:</span>
+                                    <span class="font-heading font-bold text-brand-blue">All-India Transit Escorts</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-6 flex items-center gap-3">
-                            <a href="services.html#trailers" class="flex-1 text-center py-2.5 border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-heading font-bold text-xs tracking-wide rounded-xl transition">
-                                View Specs
+
+                        <div class="mt-6">
+                            <a href="https://wa.me/917822022220?text=Hello%20Pandit%20Crane%20Service,%20I%20am%20interested%20in%20renting%20a%20Heavy%20Logistics%20Trailer" target="_blank" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl shadow transition">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                <span>Call / WhatsApp Now</span>
                             </a>
-                            <button onclick="selectEquipmentForQuote('Heavy Duty Trailers')" class="flex-1 py-2.5 bg-brand-orange hover:bg-brand-orangeLight text-white font-heading font-bold text-xs tracking-wide rounded-xl shadow transition">
-                                Book Trailer
-                            </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 5: Forklifts -->
-                <div data-category="mobile" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition-all duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative group">
-                        <img src="images/7.jpg" alt="Industrial Forklift" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-2.5 py-1 rounded shadow">
-                            2T – 25T Capacity
+                <div data-category="mobile" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition flex flex-col">
+                    <div class="h-52 overflow-hidden relative cursor-pointer" onclick="openLightbox('images/7.jpg', 'Heavy Duty Industrial Forklifts (2T - 25T)')">
+                        <img src="images/7.jpg" alt="Industrial Forklift" class="w-full h-full object-cover transition duration-300 hover:scale-105">
+                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-3 py-1 rounded-lg shadow">
+                            2T – 25T
+                        </span>
+                        <span class="absolute top-3 right-3 bg-brand-blueDark/80 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg">
+                            Warehouse
                         </span>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xl font-heading font-extrabold text-brand-blueDark">Forklifts</h3>
-                            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-                                Precision diesel and heavy-duty industrial forklifts for warehouse palletizing, factory machinery shifting, and container stuffing/de-stuffing.
-                            </p>
+                            <h3 class="text-lg font-heading font-extrabold text-brand-blueDark">Industrial Forklifts</h3>
+                            
+                            <div class="mt-4 space-y-2 text-xs">
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Capacity:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">2 Tons – 25 Tons</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Lift Height:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">Up to 6m Mast</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Ideal Use Case:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark text-right">Factory Pallets &amp; Machinery</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Drive:</span>
+                                    <span class="font-heading font-bold text-slate-700">Diesel &amp; Battery Electric</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-6 flex items-center gap-3">
-                            <a href="images/Forlift.pdf" target="_blank" class="flex-1 text-center py-2.5 border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-heading font-bold text-xs tracking-wide rounded-xl transition">
-                                View Specs
+
+                        <div class="mt-6">
+                            <a href="https://wa.me/917822022220?text=Hello%20Pandit%20Crane%20Service,%20I%20am%20interested%20in%20renting%20an%20Industrial%20Forklift" target="_blank" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl shadow transition">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                <span>Call / WhatsApp Now</span>
                             </a>
-                            <button onclick="selectEquipmentForQuote('Industrial Forklift (2T - 25T)')" class="flex-1 py-2.5 bg-brand-orange hover:bg-brand-orangeLight text-white font-heading font-bold text-xs tracking-wide rounded-xl shadow transition">
-                                Book Forklift
-                            </button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 6: Manlifts & Boom Lifts -->
-                <div data-category="logistics" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition-all duration-300 flex flex-col">
-                    <div class="h-48 overflow-hidden relative group">
-                        <img src="images/8.jpg" alt="Manlift Platform" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-2.5 py-1 rounded shadow">
-                            Elevated Access
+                <div data-category="logistics" class="equip-card bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-industrial transition flex flex-col">
+                    <div class="h-52 overflow-hidden relative cursor-pointer" onclick="openLightbox('images/8.jpg', 'Articulated Boom Lift & Manlift (10m - 45m)')">
+                        <img src="images/8.jpg" alt="Manlift Platform" class="w-full h-full object-cover transition duration-300 hover:scale-105">
+                        <span class="absolute top-3 left-3 bg-brand-orange text-white text-xs font-heading font-bold uppercase px-3 py-1 rounded-lg shadow">
+                            10m – 45m
+                        </span>
+                        <span class="absolute top-3 right-3 bg-brand-blueDark/80 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg">
+                            Aerial Access
                         </span>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xl font-heading font-extrabold text-brand-blueDark">Manlifts &amp; Boom Lifts</h3>
-                            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
-                                Articulated and telescopic boom lifts providing safe, stable elevated work platforms for structural erection, electrical, and facade work.
-                            </p>
+                            <h3 class="text-lg font-heading font-extrabold text-brand-blueDark">Articulated Manlift Platform</h3>
+                            
+                            <div class="mt-4 space-y-2 text-xs">
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Height:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">10 Meters – 45 Meters</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Basket Capacity:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark">230 kg – 450 kg Dual</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Ideal Use Case:</span>
+                                    <span class="font-heading font-bold text-brand-blueDark text-right">Facade, Lighting &amp; Staging</span>
+                                </div>
+                                <div class="flex items-center justify-between p-2 rounded-lg bg-brand-surface">
+                                    <span class="text-slate-500 font-medium">Safety:</span>
+                                    <span class="font-heading font-bold text-emerald-700">Dual Emergency Lowering</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-6 flex items-center gap-3">
-                            <a href="services.html#manlifts" class="flex-1 text-center py-2.5 border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-heading font-bold text-xs tracking-wide rounded-xl transition">
-                                View Specs
+
+                        <div class="mt-6">
+                            <a href="https://wa.me/917822022220?text=Hello%20Pandit%20Crane%20Service,%20I%20am%20interested%20in%20renting%20a%20Manlift%20Boom%20Lift" target="_blank" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl shadow transition">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                <span>Call / WhatsApp Now</span>
                             </a>
-                            <button onclick="selectEquipmentForQuote('Manlift / Boom Lift Rental')" class="flex-1 py-2.5 bg-brand-orange hover:bg-brand-orangeLight text-white font-heading font-bold text-xs tracking-wide rounded-xl shadow transition">
-                                Book Manlift
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -669,8 +762,8 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="services.html" class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blueDark text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-xl shadow transition">
-                    <span>View Complete Equipment Fleet &amp; Technical Specs</span>
+                <a href="equipment.html" class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-blueDark text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-xl shadow transition">
+                    <span>Explore Full Equipment Catalog &amp; Technical Specs</span>
                     <svg class="w-4 h-4 text-brand-orange" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
             </div>
@@ -1291,18 +1384,15 @@
                     </p>
                 </div>
 
-                <!-- Col 2: Quick Links -->
+                <!-- Col 2: Quick Links (5 Core Links) -->
                 <div>
                     <h4 class="font-heading font-bold text-white text-sm tracking-wide mb-4">Quick Navigation</h4>
                     <ul class="space-y-2 text-xs">
                         <li><a href="index.html" class="hover:text-brand-orange transition">Home</a></li>
+                        <li><a href="equipment.html" class="hover:text-brand-orange transition">Equipment</a></li>
+                        <li><a href="gallery.html" class="hover:text-brand-orange transition">Gallery</a></li>
                         <li><a href="about.html" class="hover:text-brand-orange transition">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-brand-orange transition">Our Equipment</a></li>
-                        <li><a href="our-services.html" class="hover:text-brand-orange transition">Our Services</a></li>
-                        <li><a href="our-clients.html" class="hover:text-brand-orange transition">Our Clients</a></li>
-                        <li><a href="gallery.html" class="hover:text-brand-orange transition">Photo Gallery</a></li>
-                        <li><a href="blog.html" class="hover:text-brand-orange transition">Blog &amp; Articles</a></li>
-                        <li><a href="contact.html" class="hover:text-brand-orange transition">Contact Us</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-orange transition">Contact</a></li>
                     </ul>
                 </div>
 
@@ -1310,12 +1400,12 @@
                 <div>
                     <h4 class="font-heading font-bold text-white text-sm tracking-wide mb-4">Our Equipments</h4>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="services.html#hydraulic" class="hover:text-brand-orange transition">Hydraulic Cranes (20T-500T)</a></li>
-                        <li><a href="services.html#pickcarry" class="hover:text-brand-orange transition">Pick and Carry Cranes (2T-30T)</a></li>
-                        <li><a href="services.html#lattice" class="hover:text-brand-orange transition">Lattice Boom Cranes (Up to 700T)</a></li>
-                        <li><a href="services.html#trailers" class="hover:text-brand-orange transition">Heavy Duty Low-Bed Trailers</a></li>
-                        <li><a href="services.html#forklifts" class="hover:text-brand-orange transition">Industrial Forklifts</a></li>
-                        <li><a href="services.html#manlifts" class="hover:text-brand-orange transition">Manlifts &amp; Boom Lifts</a></li>
+                        <li><a href="equipment.html" class="hover:text-brand-orange transition">Hydraulic Cranes (20T–500T)</a></li>
+                        <li><a href="equipment.html" class="hover:text-brand-orange transition">Lattice Boom Crawlers (Up to 700T)</a></li>
+                        <li><a href="equipment.html" class="hover:text-brand-orange transition">Pick &amp; Carry Hydra (2T–30T)</a></li>
+                        <li><a href="equipment.html" class="hover:text-brand-orange transition">Heavy Duty Low-Bed Trailers</a></li>
+                        <li><a href="equipment.html" class="hover:text-brand-orange transition">Industrial Forklifts (2T–25T)</a></li>
+                        <li><a href="equipment.html" class="hover:text-brand-orange transition">Articulated Manlifts &amp; Boom Lifts</a></li>
                     </ul>
                 </div>
 
@@ -1345,7 +1435,7 @@
             <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
                 <p>Copyright © 2019–2026 Pandit Crane Service. All Rights Reserved.</p>
                 <div class="flex items-center gap-4">
-                    <a href="services.html" class="hover:text-brand-orange transition">Equipment</a>
+                    <a href="equipment.html" class="hover:text-brand-orange transition">Equipment</a>
                     <a href="contact.html" class="hover:text-brand-orange transition">Get Quote</a>
                     <button onclick="openBrochureModal()" class="text-brand-orange hover:underline">Download Brochure</button>
                 </div>
